@@ -15,8 +15,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <title>Hello, world!</title>
+    <title>{% block title %}{% endblock title %}</title>
   </head>
+  {% block css %}{% endblock css %}
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
@@ -40,6 +41,10 @@
           </ul>
         </div>
       </nav>
+
+      
+      {% block content %}{% endblock content %}
+        
       <!-- Footer -->
 <footer class="page-footer font-small stylish-color-dark pt-4">
 
@@ -180,7 +185,9 @@
   
   </footer>
   <!-- Footer -->
-
+      
+      {% block js %}{% endblock js %}
+        
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
