@@ -8,6 +8,7 @@ class Event(models.Model):
     title  = models.CharField(max_length=50)
     # Specify location for 'default' and 'upload_to'
     bg_image = models.ImageField(default='',upload_to='')
+    yt_link = models.URLField(max_length=300)
     content = models.TextField()
 
     def save(self,*args, **kwargs):
