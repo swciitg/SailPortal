@@ -1,5 +1,5 @@
 from django.db import models
-
+from PIL import Image
 from django.urls import reverse
 
 # Create your models here.
@@ -7,8 +7,8 @@ from django.urls import reverse
 class Event(models.Model):
     title  = models.CharField(max_length=50)
     # Specify location for 'default' and 'upload_to'
-    bg_image = models.ImageField(default='',upload_to='',null=True)
-    yt_link = models.URLField(default="",max_length=300,null=True)
+    bg_image = models.ImageField(default='default.jpg',null=True,upload_to='media/events/')
+    yt_link = models.URLField(null=True,max_length=300)
     content = models.TextField()
 
     def save(self,*args, **kwargs):
@@ -21,3 +21,9 @@ class Event(models.Model):
             output_size = (450, 350)
             img.thumbnail(output_size)
             img.save(self.bg_image.path)
+        
+    def __str__(self):
+        return self.title
+    
+    def get_absolute_url(self):
+        return reverse('events-detail', kwargs={'pk': self.pk})

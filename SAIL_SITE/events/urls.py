@@ -4,8 +4,8 @@ from .views import EventListView,EventDetailView, event
 
 app_name='events'
 urlpatterns = [
-    path('events/',EventListView.as_view(),name='event-home'),
-    path('events/<int:pk>/', EventDetailView.as_view(), name='events-detail'),
+    path('',EventListView.as_view(),name='events-home'),
+    path('<int:pk>/', EventDetailView.as_view(), name='events-detail'),
 
     
     

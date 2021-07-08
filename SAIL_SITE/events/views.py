@@ -14,7 +14,7 @@ def event(request):
     context = {
         'events': Event.objects.all()
     }
-    return render(request, 'events/events-home.html', context)
+    return render(request, 'events/home.html', context)
 
 
 class EventListView(ListView):
