@@ -7,8 +7,8 @@ from django.urls import reverse
 class Event(models.Model):
     title  = models.CharField(max_length=50)
     # Specify location for 'default' and 'upload_to'
-    bg_image = models.ImageField(default='',upload_to='',Null=True)
-    yt_link = models.URLField(default="",max_length=300,Null=True)
+    bg_image = models.ImageField(default='',upload_to='',null=True)
+    yt_link = models.URLField(default="",max_length=300,null=True)
     content = models.TextField()
 
     def save(self,*args, **kwargs):

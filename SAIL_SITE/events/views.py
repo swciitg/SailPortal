@@ -1,10 +1,10 @@
 from django.db import models
-from SAIL_SITE.events.models import Event
-#from .models import Event
+#from SAIL_SITE.events.models import Event
+from .models import Event
 from django.shortcuts import render
 from django.views.generic import ListView,DetailView
 
-# Not required for now
+
 from django.views.generic import CreateView,UpdateView,DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 
