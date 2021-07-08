@@ -50,3 +50,11 @@
   .event-content:hover{
     transform: scale(1.05,1.05);
   }
+
+
+  .yt-link{
+    border-radius: 3rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
