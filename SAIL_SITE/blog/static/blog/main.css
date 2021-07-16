@@ -1,0 +1,17 @@
+.col-sm-6{
+  border: .5rem black ;
+}
+
+.single-blog{
+  border: .05rem snow black ;
+  margin-top: 2rem;
+  
+}
+
+.blog-link{
+  border: .05rem solid black;
+  padding-left: .75rem;
+  padding-right: .75rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
