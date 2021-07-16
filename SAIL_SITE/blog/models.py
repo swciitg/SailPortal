@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.lookups import EndsWith
 from django.utils import timezone
 from django.urls import reverse
 
@@ -13,7 +14,8 @@ class Blog(models.Model):
     # Better to keep it as CharField() as only admin is gonna edit this
     # author = models.ForeignKey(User,on_delete=models.CASCADE)
     date_posted = models.DateField(default=timezone.now)
-    content = models.TextField()
+    content = models.TextField(max_length=400)
+    # content here is the sample content,ie it'll only contain some part ending with ...
     blog_link = models.URLField()
     bg_image = models.ImageField(default='blog/dafault-blog.png')
 
