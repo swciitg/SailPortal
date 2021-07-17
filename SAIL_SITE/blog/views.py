@@ -14,7 +14,7 @@ def home(request):
 
 class BlogListView(ListView):
     model = Blog
-    template_name = blog/home.html
+    template_name = "blog/home.html"
     context_object_name = 'blogs'
     ordering = ['-date_posted']
 
