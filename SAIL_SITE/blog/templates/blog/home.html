@@ -10,8 +10,7 @@
 {% block css %}
     <style>
         body{
-            
-            background-image: url("https://drive.google.com/file/d/1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd/view?usp=sharing");
+            background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
             background-blend-mode: multiply;
             background-repeat: no-repeat;
             background-size: cover;
@@ -87,6 +86,26 @@
         .blog-link:hover{
             transform: scale(1.05,1.05);
         }
+
+        @media screen { min-width: none; max-width: 40rem;
+            .blog-thumb{
+                width: 25rem;
+                height: auto;
+                border-radius: 1rem;
+            
+                box-shadow: .5rem .5rem rgb(197, 197, 197);
+                
+            
+                margin-bottom: 2rem;
+                transition: transform .2s;
+                
+                margin-bottom: 2rem;
+            }
+            .blog-thumb:hover{
+                transform: scale(1.05,1.05);
+            }   
+        }
+        
     </style>
 {% endblock css %}
     
@@ -104,12 +123,12 @@
                                 <div class="col-sm-6">
                                     <div class="single-blog">
                                         <div>
-                                            <img class="blog-thumb" src="{{ blog.bg_image }}" alt="">
+                                            <img class="blog-thumb" src="https://drive.google.com/uc?export=view&id={{ blog.bg_image_id }}" alt="">
                                         </div>
                                         <h4 class="blog-title">{{ blog.title }}</h4>
                                         <p class="blog-meta">{{ blog.author }} , {{ blog.date_posted|date:"F d, Y" }}</p>
                                         <p>{{ blog.content }}</p>
-                                        <a target="_blank" href="{{ blog.blog_link}}" class="button">Read More</a>
+                                        <a target="_blank" href="{{ blog.blog_link}}" class="blog-link">Read More</a>
                                     </div>
                                 </div>
                                 

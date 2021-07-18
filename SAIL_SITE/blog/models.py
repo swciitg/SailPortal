@@ -14,11 +14,10 @@ class Blog(models.Model):
     # Better to keep it as CharField() as only admin is gonna edit this
     # author = models.ForeignKey(User,on_delete=models.CASCADE)
     date_posted = models.DateField(default=timezone.now)
-    content = models.TextField(max_length=400)
+    content = models.TextField(max_length=1000)
     # content here is the sample content,ie it'll only contain some part ending with ...
     blog_link = models.URLField()
-    bg_image = models.URLField()
-    # bg_image = models.ImageField(default='blog/dafault-blog.png')
+    bg_image_id = models.CharField(max_length=50)
 
 
     def __str__(self) -> str:

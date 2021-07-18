@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('date_posted', models.DateField(default=django.utils.timezone.now)),
                 ('content', models.TextField(max_length=400)),
                 ('blog_link', models.URLField()),
-                ('bg_image', models.ImageField(default='blog/dafault-blog.png', upload_to='')),
+                ('bg_image_id', models.ImageField(default='blog/dafault-blog.png', upload_to='')),
             ],
         ),
     ]
