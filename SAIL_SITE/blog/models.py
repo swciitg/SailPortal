@@ -17,7 +17,8 @@ class Blog(models.Model):
     content = models.TextField(max_length=400)
     # content here is the sample content,ie it'll only contain some part ending with ...
     blog_link = models.URLField()
-    bg_image = models.ImageField(default='blog/dafault-blog.png')
+    bg_image = models.URLField()
+    # bg_image = models.ImageField(default='blog/dafault-blog.png')
 
 
     def __str__(self) -> str:

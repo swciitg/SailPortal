@@ -10,7 +10,8 @@
 {% block css %}
     <style>
         body{
-            background-image: url(/SAIL_SITE/media/media/blog/blog-bg.png);
+            
+            background-image: url("https://drive.google.com/file/d/1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd/view?usp=sharing");
             background-blend-mode: multiply;
             background-repeat: no-repeat;
             background-size: cover;
@@ -103,7 +104,7 @@
                                 <div class="col-sm-6">
                                     <div class="single-blog">
                                         <div>
-                                            <img class="blog-thumb" src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Hello_Web_Series_%28Wordmark%29_Logo.png/1200px-Hello_Web_Series_%28Wordmark%29_Logo.png" alt="">
+                                            <img class="blog-thumb" src="{{ blog.bg_image }}" alt="">
                                         </div>
                                         <h4 class="blog-title">{{ blog.title }}</h4>
                                         <p class="blog-meta">{{ blog.author }} , {{ blog.date_posted|date:"F d, Y" }}</p>
