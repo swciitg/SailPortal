@@ -21,6 +21,7 @@ class EventListView(ListView):
     model = Event
     template_name = 'events/home.html'  # <app>/<model>_<viewtype>.html
     context_object_name = 'events'
+    ordering = ['-title']
     
 class EventDetailView(DetailView):
     model = Event
