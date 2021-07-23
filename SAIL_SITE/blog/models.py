@@ -6,7 +6,7 @@ from django.urls import reverse
 from ckeditor.fields import RichTextField
 
 # Not necessary though
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -21,7 +21,6 @@ class Blog(models.Model):
     body = RichTextField(blank=True, null=True)
     blog_link = models.URLField(blank=True, null=True)
     bg_image_id = models.CharField(blank=True, null=True,max_length=50)
-    bg_image_link = RichTextField(blank=True, null=True)
 
     def __str__(self):
         return self.title

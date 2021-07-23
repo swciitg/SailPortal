@@ -17,7 +17,6 @@
 			background-size: cover;
 			background-attachment: fixed;
 			/* background-blend-mode: lighten; */
-			
 		}
 		.title{
 			font-family: cursive;
@@ -26,24 +25,32 @@
 			/* background-color: rgb(184, 132, 253); */
 			opacity: 70%;
 			/* width: max-content; */
-			padding: 2rem 2rem 2rem 2rem;
+			/* padding: 2rem 2rem 2rem 2rem; */
 			margin: 2rem 2rem 2rem 2rem;
 			transition: transform .2s;
 		}
 		.title:hover{
 			transform: scale(1.025,1.025);
+			/* background-color: rgb(184, 132, 253); */
 		}
 		.title-text{
 			transition: transform .2s;
-			
 		}
 		.title-text:hover{
+			transform: scale(1.025,1.025);
+		}
+		.date-time{
+			transition: transform .2s;
+			
+			text-align: center;
+		}
+		.date-time:hover{
 			transform: scale(1.025,1.025);
 		}
 		.quote{
 			margin-left: 2rem;
 			margin-right: 2rem;
-			padding: 2rem 2rem 2rem 2rem;
+			/* padding: 2rem 2rem 2rem 2rem; */
 			width: 95%;
 			border-bottom-left-radius: 2rem;
 			border-top-right-radius: 2rem;
@@ -59,12 +66,12 @@
 		transform: scale(1.025,1.025);
 		}
 		.blog-body{
-			margin: 2rem 2rem 2rem 2rem;
+			margin: 2rem 10%  2rem 10%;
 			padding: 2rem 2rem 2rem 2rem;
-			width: 95%;
+			width: 80%;
 			border-radius: 3rem;
 			border-style: double;
-			opacity: 80%;
+			opacity: 85%;
 			background-color: ivory;
 			transition: transform .2s;
 		}
@@ -74,17 +81,20 @@
 		.blog-body-content{
 			margin: 2rem 2rem 2rem 2rem;
 			padding: 2rem 2rem 2rem 2rem;
-			transition: transform .2s;
-		}
-		.blog-body-content:hover{
-			transform: scale(1.025,1.005);
+			
 		}
 		
 		.button{
 			background-color: cyan;
 			border-radius: .5rem;
-			margin: 2rem 45% 5rem ;
+			margin: 0 40% 2rem ;
 			width: max-content;
+			box-shadow: .25rem .25rem rgb(197, 197, 197);
+			transition: transform .2s;
+		}
+		.button:hover{
+			background-color: chartreuse;
+			transform: scale(1.5,1.5);
 		}
 	</style>
 {% endblock css %}
@@ -112,8 +122,15 @@
 		</div>
 	</section>
 	<button class="button">
-		<a target="_blank" href="{{ object.blog_link }}">Read on Medium</a>
-		
+		<a target="_blank" href="{{ object.blog_link }}">Read on Medium</a>		
 	</button>
+	
+	
 {% endblock content %}
 	
+	
+{% block share-options %}
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60faaee9722d7f95"></script>
+
+{% endblock share-options %}

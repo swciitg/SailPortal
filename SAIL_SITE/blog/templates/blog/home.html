@@ -67,7 +67,7 @@
         }
         
         
-        .blog-link{
+        .button{
             border: .05rem solid black;
             border-radius: .5rem;
             padding-left: .75rem;
@@ -75,13 +75,17 @@
             padding-top: .5rem;
             padding-bottom: .5rem;
         
+            box-shadow: .25rem .25rem rgb(197, 197, 197);
+
             transition: transform .2s;
             background-color: rgb(188, 255, 255);
             
             align-items: center;
         }
-        .blog-link:hover{
-            transform: scale(1.05,1.05);
+        .button:hover{
+            background-color: rgb(97, 255, 255);
+            box-shadow: .15rem .15rem rgb(197, 197, 197);
+            transform: scale(1.25,1.25);
         }
 
         /* @media screen { min-width: none; max-width: 40rem;
@@ -126,7 +130,9 @@
                                         <p class="blog-meta">{{ blog.author }} , {{ blog.date_posted|date:"F d, Y" }}</p>
                                         <p>{{ blog.content }}</p>
                                         
-                                        <a class="article-title" href="{% url 'blog:blog_detail' blog.id %}">Read More</a>
+                                        <button class="button">
+                                            <a class="blog-link" href="{% url 'blog:blog_detail' blog.id %}">Read More</a>
+                                        </button>
                                     </div>
                                 </div>
                                 
