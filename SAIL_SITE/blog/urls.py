@@ -8,7 +8,7 @@ urlpatterns = [
     path('', BlogListView.as_view(),name='blog-home'),
     
 
-    path('<int:pk>/', BlogDetailView.as_view(), name = 'blog-detail'),
+    path('<int:pk>/', BlogDetailView.as_view(), name = 'blog_detail'),
 
     # path('<int:pk>/', BlogDetailView.as_view(), name = 'blog_detail'),
     # path('<str:title>/', BlogDetailView.as_view(), name = 'blog_detail'),

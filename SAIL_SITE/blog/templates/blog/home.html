@@ -125,8 +125,8 @@
                                         <h4 class="blog-title">{{ blog.title }}</h4>
                                         <p class="blog-meta">{{ blog.author }} , {{ blog.date_posted|date:"F d, Y" }}</p>
                                         <p>{{ blog.content }}</p>
-                                        <a target="_blank" href="{{ blog.blog_link}}" class="blog-link">Read More</a>
-                                        <a class="article-title" href="{% url 'blog_detail' post.id %}">Read More</a>
+                                        
+                                        <a class="article-title" href="{% url 'blog:blog_detail' blog.id %}">Read More</a>
                                     </div>
                                 </div>
                                 
