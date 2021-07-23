@@ -34,7 +34,8 @@
         }
         
         .blog-thumb{
-            width: 30rem;
+            /* width: 30rem; */
+            width: 100%;
             height: auto;
             border-radius: 1rem;
         
@@ -48,10 +49,6 @@
         }
         .blog-thumb:hover{
             transform: scale(1.05,1.05);
-        }
-        
-        .blog-title{
-            
         }
         
         .single-blog{
@@ -87,7 +84,7 @@
             transform: scale(1.05,1.05);
         }
 
-        @media screen { min-width: none; max-width: 40rem;
+        /* @media screen { min-width: none; max-width: 40rem;
             .blog-thumb{
                 width: 25rem;
                 height: auto;
@@ -104,7 +101,7 @@
             .blog-thumb:hover{
                 transform: scale(1.05,1.05);
             }   
-        }
+        } */
         
     </style>
 {% endblock css %}
@@ -129,6 +126,7 @@
                                         <p class="blog-meta">{{ blog.author }} , {{ blog.date_posted|date:"F d, Y" }}</p>
                                         <p>{{ blog.content }}</p>
                                         <a target="_blank" href="{{ blog.blog_link}}" class="blog-link">Read More</a>
+                                        <a class="article-title" href="{% url 'blog_detail' post.id %}">Read More</a>
                                     </div>
                                 </div>
                                 

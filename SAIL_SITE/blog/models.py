@@ -3,6 +3,8 @@ from django.db.models.lookups import EndsWith
 from django.utils import timezone
 from django.urls import reverse
 
+from ckeditor.fields import RichTextField
+
 # Not necessary though
 from django.contrib.auth.models import User
 
@@ -16,13 +18,15 @@ class Blog(models.Model):
     date_posted = models.DateField(default=timezone.now)
     content = models.TextField(max_length=1000)
     # content here is the sample content,ie it'll only contain some part ending with ...
-    blog_link = models.URLField()
-    bg_image_id = models.CharField(max_length=50)
+    body = RichTextField(blank=True, null=True)
+    blog_link = models.URLField(blank=True, null=True)
+    bg_image_id = models.CharField(blank=True, null=True,max_length=50)
+    bg_image_link = RichTextField(blank=True, null=True)
 
-
-    def __str__(self) -> str:
+    def __str__(self):
         return self.title
     
     def get_absolute_url(self):
-        return reverse("blog-detail", kwargs={"pk": self.pk})
+        # return reverse("blog_detail", kwargs={"pk": self.pk})
+        return reverse("blog/blog_detail", kwargs={"title": self.title})
     

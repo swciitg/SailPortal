@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+	Blog | {{object.title}}
+{% endblock title %}
+
+
+{% block css %}
+	<style>
+		body{
+			background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
+			background-blend-mode: multiply;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			
+		}
+		.title{
+			font-family: cursive;
+			text-align: center;
+			border-radius: 1rem;
+			background-color: rgb(184, 132, 253);
+			opacity: 70%;
+			/* width: max-content; */
+			padding: 2rem 2rem 2rem 2rem;
+			margin: 2rem 3.05rem 2rem 2rem;
+			transition: transform .2s;
+		}
+		.title:hover{
+			transform: scale(1.025,1.025);
+		}
+		.title-text{
+			transition: transform .2s;
+			
+		}
+		.title-text:hover{
+			transform: scale(1.025,1.025);
+		}
+		.quote{
+			margin-left: 2rem;
+			margin-right: 2rem;
+			padding: 2rem 2rem 2rem 2rem;
+			width: 95%;
+			border-bottom-left-radius: 2rem;
+			border-top-right-radius: 2rem;
+			border-top-left-radius: .5rem;
+			border-bottom-right-radius: .5rem;
+			
+			opacity: 80%;
+			background-color: rgb(127, 246, 255);
+			transition: transform .2s;
+		
+		}
+		.quote:hover{
+		transform: scale(1.025,1.025);
+		}
+		.blog-body{
+			margin: 2rem 2rem 2rem 2rem;
+			padding: 2rem 2rem 2rem 2rem;
+			width: 95%;
+			border-radius: 3rem;
+			border-style: double;
+			opacity: 80%;
+			background-color: ivory;
+			transition: transform .2s;
+		}
+		.blog-body:hover{
+		transform: scale(1.025,1.025);
+		}
+		
+		.button{
+			background-color: cyan;
+			border-radius: .5rem;
+			margin: 2rem 45% 5rem ;
+			width: max-content;
+		}
+	</style>
+{% endblock css %}
+	
+
+{% block content %}
+	<div class="title">
+		<h1 class="title-text">{{object.title}}</h1>
+	</div>
+	
+	<blockquote class="quote">
+		<p class="quote-text" data-selectable-paragraph="">
+
+		</p>
+	</blockquote>
+	<section class="blog-body">
+		{{ object.body }}
+	</section>
+	<button class="button">
+		<a href="{% url {{ object.blog_link }} %}">Read on Medium</a>
+	</button>
+{% endblock content %}
+	

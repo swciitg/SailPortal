@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.views.generic import ListView
 from django.views.generic import DetailView,CreateView,UpdateView,DeleteView
@@ -12,15 +12,27 @@ def home(request):
     }
     return render(request, 'blog/home.html',context)
 
+def blog_detail(request):
+    context = {
+        'blogs': Blog.objects.all()
+    }
+    template_name = "blog_detail.html"
+    return render(request, 'blog/blog_detail.html',context)
+    
+    # return render(request,'/blog_detail.html',{'blog':blog})
+
 class BlogListView(ListView):
     model = Blog
     template_name = "blog/home.html"
     context_object_name = 'blogs'
     ordering = ['-date_posted']
 
+
+
 # Not required until external links are used
 class BlogDetailView(DetailView):
     model = Blog
+    template_name = "blog_detail.html"
 
 
 # To be worked upon

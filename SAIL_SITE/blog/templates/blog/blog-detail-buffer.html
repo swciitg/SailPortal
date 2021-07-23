@@ -15,20 +15,91 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
-    <title>{% block title %}{% endblock title %}</title>
+    <title>Blog | Title</title>
   </head>
-  {% block css %}{% endblock css %}
+  
   <style>
-    .page-footer{
-			opacity: 50%;
-			
-		}
-		.page-footer:hover{
-			opacity: 95%;
-			transition: linear;
-			transition-duration: .25s;
-		}
-  </style>
+	body{
+            background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+	    
+        }
+	.title{
+		font-family: cursive;
+		color: blue;
+		text-align: center;
+		border-radius: 1rem;
+		background-color: rgb(184, 132, 253);
+		opacity: 70%;
+		/* width: max-content; */
+		padding: 2rem 2rem 2rem 2rem;
+		margin: 2rem 3.05rem 2rem 2rem;
+		transition: transform .2s;
+        
+        }
+        .title:hover{
+            transform: scale(1.025,1.025);
+        }
+	.title-text{
+		transition: transform .2s;
+            	
+        }
+        .title-text:hover{
+            	transform: scale(1.025,1.025);
+        }
+	.quote{
+		margin-left: 2rem;
+		margin-right: 2rem;
+		padding: 2rem 2rem 2rem 2rem;
+		width: 95%;
+		border-bottom-left-radius: 2rem;
+		border-top-right-radius: 2rem;
+		border-top-left-radius: .5rem;
+		border-bottom-right-radius: .5rem;
+		
+		opacity: 80%;
+		background-color: rgb(127, 246, 255);
+		transition: transform .2s;
+        
+        }
+        .quote:hover{
+            transform: scale(1.025,1.025);
+        }
+	.blog-body{
+		margin: 2rem 2rem 2rem 2rem;
+		padding: 2rem 2rem 2rem 2rem;
+		width: 95%;
+		border-radius: 3rem;
+		border-style: double;
+		opacity: 80%;
+		background-color: ivory;
+		transition: transform .2s;
+        }
+        .blog-body:hover{
+            transform: scale(1.025,1.025);
+        }
+	.page-footer{
+		opacity: 50%;
+		
+	}
+	.page-footer:hover{
+		opacity: 95%;
+		transition: linear;
+		transition-duration: .25s;
+	}
+	.button{
+		background-color: cyan;
+		border-radius: .5rem;
+		margin: 2rem 45% 5rem ;
+		width: max-content;
+	}
+
+
+	
+	</style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
@@ -55,8 +126,47 @@
       </nav>
 
       
-      {% block content %}{% endblock content %}
-        
+     
+      
+      <br>
+      <div class="title">
+
+	      <h1 class="title-text" style="opacity: 100%;">Test Cricket In the 21st Century</h1>
+      </div>
+	
+      	<blockquote class="quote">
+		<p id="9bf5" class="quote-text" data-selectable-paragraph="">In a brand new blog, team SAIL brings to you all, the journey of Aman Dalmia, batch of 2018, while building a startup during his sophomore year, how the experience changed him and the lessons he learned.</p>
+		<p>
+			HI there!!!
+		</p>
+	</blockquote>
+	<section class="blog-body">
+		A lot of the memories I have of my IIT Guwahati experience involve the countless hours I spent in the TV Room watching sports (mostly Cricket). My love for the sport grew by leaps and bounds during the 4 years I spent there. Everyone in IIT is fortunate to have experienced at least one Cricket World Cup during their time there. I particularly envy those who experienced the 2011 WC, as I am sure it must have been fantabulous. My love for the game and statistics inspired me to write this article.
+
+	The recently concluded India vs New Zealand Test series brought back a lot of memories for me like waking up at 4 AM to watch Test matches Down Under. Although I didn’t do that now(not willing to put the effort), it got me thinking, are Test matches more interesting to watch now or were they more exciting back then? It is very difficult to measure excitement as it is a subjective thing, but I decided to look at all the Test matches from 2000–2020 and see what insights I can find.
+
+	It is very important for Test Cricket to be exciting at this time, especially after the incredible rise of T20 cricket, and talks of a new format like the T10 cricket. When the game is getting shorter and shorter, the longest format of the game has its task cut out to stay relevant. With that being said, the introduction of Test Championship added extra meaning to each Test and series, in the bigger picture and not just for rankings.
+
+	To start off, I looked at how many matches are ending in results i.e., the percentage of test matches that ended in a result, along with the number that ended in a draw for each of the last 20 years.
+	</section>
+	
+	<button class="button">
+		<a href="">Read More</a>
+	</button>
+	
+	<!-- <div class="button">
+		<a class="btn btn-outline-info mb-4" href=""  >Read on "Medium"</a>
+	</div>
+	<a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Read on "Medium"</a>
+
+ -->
+
+      <br>
+     
+      
+      
+
+
       <!-- Footer -->
 <footer class="page-footer font-small stylish-color-dark pt-4">
 
