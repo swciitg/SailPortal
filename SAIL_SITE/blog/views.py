@@ -17,9 +17,10 @@ def blog_detail(request):
         'blogs': Blog.objects.all()
     }
     template_name = "blog_detail.html"
-    return render(request, 'blog/blog_detail.html',context) """
-    
+    return render(request, 'blog/blog_detail.html',context) 
     # return render(request,'/blog_detail.html',{'blog':blog})
+"""
+    
 
 class BlogListView(ListView):
     model = Blog
@@ -33,7 +34,7 @@ class BlogListView(ListView):
 class BlogDetailView(DetailView):
     model = Blog
     template_name = "blog/blog_detail.html"
-
+""" 
 
 # To be worked upon
 
@@ -43,9 +44,9 @@ class BlogCreateView(LoginRequiredMixin, CreateView):
 
     # Need to check for admin
 
-    """ def form_valid(self, form):
+    def form_valid(self, form):
         form.instance.author = self.request.user
-        return super().form_valid(form) """
+        return super().form_valid(form)
 
 
 class BlogUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -53,7 +54,7 @@ class BlogUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     fields = ['title', 'content']
 
     # Need to check for admin
-    """ 
+    
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
@@ -62,7 +63,7 @@ class BlogUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         Blog = self.get_object()
         if self.request.user == blog.author:
             return True
-        return False """
+        return False
 
 
 class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -70,7 +71,7 @@ class BlogDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     success_url = '/'
 
     # Need to check for admin
-    """ 
+    
     def test_func(self):
         Blog = self.get_object()
         if self.request.user == Blog.author:
