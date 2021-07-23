@@ -11,13 +11,13 @@ def home(request):
         'blogs': Blog.objects.all()
     }
     return render(request, 'blog/home.html',context)
-
+""" 
 def blog_detail(request):
     context = {
         'blogs': Blog.objects.all()
     }
     template_name = "blog_detail.html"
-    return render(request, 'blog/blog_detail.html',context)
+    return render(request, 'blog/blog_detail.html',context) """
     
     # return render(request,'/blog_detail.html',{'blog':blog})
 
@@ -32,7 +32,7 @@ class BlogListView(ListView):
 # Not required until external links are used
 class BlogDetailView(DetailView):
     model = Blog
-    template_name = "blog_detail.html"
+    template_name = "blog/blog_detail.html"
 
 
 # To be worked upon

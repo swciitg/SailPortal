@@ -26,7 +26,7 @@ class Blog(models.Model):
     def __str__(self):
         return self.title
     
-    def get_absolute_url(self):
-        # return reverse("blog_detail", kwargs={"pk": self.pk})
-        return reverse("blog/blog_detail", kwargs={"title": self.title})
+    """ def get_absolute_url(self):
+        return reverse("blog_detail", kwargs={"pk": self.pk})
+        # return reverse("blog/blog_detail", kwargs={"title": self.title}) """
     
