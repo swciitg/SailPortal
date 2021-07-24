@@ -25,8 +25,9 @@ class EventListView(ListView):
     
 class EventDetailView(DetailView):
     model = Event
+    template_name = "events/events_detail.html"
 
-
+""" 
 class EventCreateView(LoginRequiredMixin, CreateView):
     model = Event
     fields = ['title', 'image']
@@ -60,3 +61,4 @@ class EventDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
     '''
        
+ """

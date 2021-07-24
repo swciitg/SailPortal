@@ -1,0 +1,153 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+	Event | {{object.title}}
+{% endblock title %}
+
+
+{% block css %}
+    <style>
+        body{
+			background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
+			background-blend-mode: multiply;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			/* background-blend-mode: lighten; */
+		}
+    </style>
+{% endblock css %}
+    
+const odd = [1,3,5,7]
+
+{% block content %}
+
+    
+    <!-- {% if object.id != 0 %} -->
+    {% if object.id in odd %}
+        <section class="section-padding about-area bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="row flex-column-reverse flex-lg-row">
+                        
+                        <!-- Checking if its youtube video -->
+                        
+                        {% if object.yt_link != "" %}
+                            <div  class="col-lg-6 col-xs-12">
+                                <iframe class="yt-link" width="550rem" height="350rem" src="{{ object.yt_link }}" title="{{ object.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="section-div col-lg-6 col-xs-12">
+                                <div class="about-content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-6  col-xs-12">
+                                            <div class="section-title text-center">
+                                                <h2>{{ object.title }}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="event-content" style="padding-left:5%;">
+                                    {{ object.content }}
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+                            
+                        {% else %}
+                            
+                            <div class="col-lg-6 col-xs-12">
+                                <img class="event-bg" style="border-radius: 3rem;" src="https://drive.google.com/uc?export=view&id={{ object.bg_image_id }}" alt="">
+                            </div>
+                            <div class="section-div col-lg-6 col-xs-12">
+                                <div class="about-content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-6  col-xs-12">
+                                            <div class="section-title text-center">
+                                                <h2>{{ object.title }}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="event-content" style="padding-left:5%;">
+                                    {{ object.content }}
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+
+                        {% endif %}
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {% else %}
+        <section class="section-padding about-area bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="row flex-column-reverse flex-lg-row">
+                        
+                        <!-- Checking if its youtube video -->
+                        
+                        {% if object.yt_link != "" %}
+                            <div class="section-div col-lg-6 col-xs-12">
+                                <div class="about-content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-6  col-xs-12">
+                                            <div class="section-title text-center">
+                                                <h2>{{ object.title }}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="event-content" style="padding-left:5%;">
+                                    {{ object.content }}
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+                            <div  class="col-lg-6 col-xs-12">
+                                <iframe class="yt-link" width="550rem" height="350rem" src="{{ object.yt_link }}" title="{{ object.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            
+                        {% else %}
+                        
+                            <div class="section-div col-lg-6 col-xs-12">
+                                <div class="about-content">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-6  col-xs-12">
+                                            <div class="section-title text-center">
+                                                <h2>{{ object.title }}</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="event-content" style="padding-left:5%;">
+                                    {{ object.content }}
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xs-12">
+                                <img class="event-bg" style="border-radius: 3rem;" src="https://drive.google.com/uc?export=view&id={{ object.bg_image_id }}" alt="">
+                            </div>
+
+                        {% endif %}
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    {% endif %}
+        
+    
+{% endblock content %}
+    
