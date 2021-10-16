@@ -15,33 +15,96 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>{% block title %}{% endblock title %}</title>
+    <style>
+    *{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto',sans-serif;
+}
+.navbar{
+	position:relative;
+  background-color: #000;
+	top: 0;
+	z-index: 99999;
+	padding:25px 0;
+}
+
+.logo{
+  margin-right: 8rem;
+}
+
+.navbar img{
+width: 20vh;
+}
+.navbar ul.nav{
+	margin-right: 15%;
+}
+.navbar ul.nav li.active,
+.navbar ul.nav li:hover{
+	background:rgba(255, 255, 255, 0.5);
+	color: #000;
+
+}
+.navbar ul.nav li a{
+	color: #fff;
+	font-size: 1em;
+	font-weight: 500;
+}
+.navbar ul.nav li.active a,
+.navbar ul.nav li:hover a{
+	color: #000;
+}
+.container-fluid{
+  padding: 0;
+}
+    
+  </style>
+  {% block css %} {% endblock css %}
+  
   </head>
-  {% block css %}{% endblock css %}
+  
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="http://iitg.ac.in/sail/assets/images/logo.png" width="90" height="30" class="d-inline-block align-top" alt="">
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'team:all'%}">Team</a>
-            </li>
-            
-          </ul>
-        </div>
-      </nav>
+    <div class="container-fluid">
+		<div>
+			<div class="col-md-12 navbar navbar-expand-lg">
+				<a class="navbar-brand logo text-white offset-md-2" href="#"> <img
+      src="http://iitg.ac.in/sail/assets/images/logo.png"
+      width="10%" height="10%" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color:white;"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="nav">
+					<li class="nav-item active">
+          <a class="nav-link" style="color: white;" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" aria-current="page" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" aria-current="page" href="#">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" aria-current="page" href="#">Initiatives</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" aria-current="page" href="#">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" aria-current="page" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" aria-current="page" href="#">Team</a>
+        </li>
+				</ul>
+			</div>
+      </div>
 
       
       {% block content %}{% endblock content %}
