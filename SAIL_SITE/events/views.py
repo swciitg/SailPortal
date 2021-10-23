@@ -1,64 +1,43 @@
 from django.db import models
-#from SAIL_SITE.events.models import Event
-from .models import Event
+from .models import Event,Category
 from django.shortcuts import render
 from django.views.generic import ListView,DetailView
 
-
-from django.views.generic import CreateView,UpdateView,DeleteView
-from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
-
 # Create your views here.
+
 
 def event(request):
     context = {
-        'events': Event.objects.all()
+        
+        'categorys': Category.objects.all()
     }
-    return render(request, 'events/home.html', context)
+    
+    return render(request, 'events/home.html', context=context)
 
 
 class EventListView(ListView):
-    model = Event
+    model = Category
     template_name = 'events/home.html'  # <app>/<model>_<viewtype>.html
-    context_object_name = 'events'
-    ordering = ['-title']
+    context_object_name = 'categorys'
+    ordering = ['name']
+  
+
+def EventDetailView(request,evnts):
+    category_evnts = Event.objects.filter(category=evnts)
+    return render(request,'events/events_detail_str.html',{'evnts':evnts,'category_evnts':category_evnts})
+   
+"""   
     
 class EventDetailView(DetailView):
-    model = Event
+    model = Category
+    #context_object_name = 'categorys'
     template_name = "events/events_detail.html"
-
-""" 
-class EventCreateView(LoginRequiredMixin, CreateView):
-    model = Event
-    fields = ['title', 'image']
-
-    '''
-    # This func should test if user is admin or not
-    def test_func(self):
-    '''
-        
-
-    
-
-
-class EventUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Event
-    fields = ['title', 'image']
-
-    '''
-    # This func should test if user is admin or not
-    def test_func(self):
-    '''
-        
-
-
-class EventDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    model = Event
-    success_url = '/'
-
-    '''
-    # This func should test if user is admin or not
-    def test_func(self):
-    '''
-       
+     """
+"""     def get_context_data(self,**kwargs):
+            events = super().get_context_data(**kwargs)
+            category = Category.objects.get( category = self.id)    
+            events['events'] = Event.objects.all().filter(category=category)
+            
+            return events
  """
+ 

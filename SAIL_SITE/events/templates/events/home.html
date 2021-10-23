@@ -36,8 +36,12 @@
             background-color: rgb(141, 248, 243);
             border-radius: 1.5rem;
             opacity: 80%;
+            transition: transform .2s;
         }
-        /* .section{
+        .single-why-me:hover{
+            transform: scale(1.05,1.05);
+        }
+        .section{
             margin-left: 2rem;
             margin-right: 2rem;
             margin-top: 2rem;
@@ -89,13 +93,11 @@
             margin-left: 2rem;
             margin-top: 2rem;
             margin-bottom: 2rem;
-        } */
+        }
 
         
     </style>
 {% endblock css %}
-    
-const odd = [1,3,5,7]
 
 {% block content %}
 
@@ -113,76 +115,42 @@ const odd = [1,3,5,7]
             </div>
         </div>
         <!-- //Section Title -->
-        <div class="row">
-            <!-- 
-            <div class="col-md-6">
-                <div class="single-why-me why-me-left">
-                    <div class="why-me-icon">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                  <a target="_blank" href="events.html#alumnitalk"><i  class="fas fa-microphone-alt"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <h4>Alumni Talk</h4>
-                    <br>
-                </div>
-            </div>
+        <div class="row" >
             
-            <div class="col-md-6">
-                <div class="single-why-me why-me-right">
-                    <div class="why-me-icon">
-                        <div class="d-table">
-                            <div class="d-table-cell">
-                                <a target="_blank" href="webinar.html"><i class="fas fa-video"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <h4>Webinar</h4>
-                    <br>
-                </div>
-            </div>
-            -->
+            {% for category in categorys %}
 
-            {% for event in events %}
 
-                {% if object.id in odd %}
-                    <div class="col-md-6">
-                        <div class="single-why-me why-me-left">
-                            <div class="why-me-icon">
-                                <div class="d-table">
-                                    <div class="d-table-cell">
-                                        <a target="_blank" href="{% url 'events:events_detail' event.id %}"><i class="fas fa-microphone-alt"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <h4>{{ event.title }}</h4>
-                            <br>
-                        </div>
-                    </div>
-
-                {% else %}
-                    <div class="col-md-6">
+         
+                    <div class="col-md-6" style="margin-top: 2rem; margin-bottom: 2rem;">
                         <div class="single-why-me why-me-right">
+                            <br>
+                            
+                            <br>
                             <div class="why-me-icon">
                                 <div class="d-table">
                                     <div class="d-table-cell">
-                                        <a target="_blank" href="{% url 'events:events_detail' event.id %}"><i class="fas fa-video"></i></a>
+
+                                       
+                                        <a target="_blank" href="{% url 'categorys:events_detail_str' category.id %}">
+                                            <!-- Works for id only not for str -->
+                                        <!-- <a target="_blank" href="{% url 'categorys:events_detail_str' category.name %}"> -->
+                                            
+                                            <img class="article-img" src="{{category.icon.url}}" width="100px" height="100px" alt='No image'>
+                                            
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <h4>{{ category.name }}</h4>
                                     </div>
                                 </div>
                             </div>
                             <br>
-                            <h4>{{ event.title }}</h4>
+                            
                             <br>
                         </div>
                     </div>
-                {% endif %}
-                    
-        
-                
+            
+
             {% endfor %}
 
         </div>
@@ -190,26 +158,5 @@ const odd = [1,3,5,7]
 </section>
 
     
-    <div class="row">
-        {% for event in events %}
-        
-        <div class="col-md-6">
-            <div class="single-why-me why-me-left">
-                <div class="why-me-icon">
-                    <div class="d-table">
-                        <div class="d-table-cell">
-                              <a target="_blank" href="{% url 'events:events_detail' event.id %}"><i class="fas fa-microphone-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <h4>{{ event.title }}</h4>
-                <br>
-            </div>
-        </div>
-
-        {% endfor %}
-    </div>
-
 {% endblock content %}
     
