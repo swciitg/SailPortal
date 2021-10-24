@@ -2,148 +2,161 @@
 
 {% load static %}
 
+
 {% block title %}
-    Blog | Home
+    Events | Home
 {% endblock title %}
     
 
 {% block css %}
     <style>
         body{
-            background-image: url("https://drive.google.com/uc?export=view&id=1Xu-JSFhqmRzfsBCpsfC8nfDch3xJQIbb");
+            background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
             background-blend-mode: multiply;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
         }
         
+        .section-title{
+            background-color: aquamarine;
+            opacity: 80%;
+            border-radius: 2rem;
+            padding: 2rem 2rem 2rem 2rem;
+            transition: transform .2s;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+        .section-title:hover{
+            transform: scale(1.05,1.05);
+        }
+
+        .single-why-me{
+            background-color: rgb(141, 248, 243);
+            border-radius: 1.5rem;
+            opacity: 80%;
+            transition: transform .2s;
+        }
+        .single-why-me:hover{
+            transform: scale(1.05,1.05);
+        }
         .section{
             margin-left: 2rem;
             margin-right: 2rem;
             margin-top: 2rem;
             margin-bottom: 2rem;
-            
+            border-radius: 3rem;
         }
-        
-        .blog-title{
+
+        .event-bg{
             transition: transform .2s;
-            margin-top: 2rem;
-        }
-        .blog-title:hover{
-            transform: scale(1.05,1.05);
-        }
-        
-        .blog-thumb{
-            /* width: 30rem; */
-            width: 100%;
+            width: 30rem;
             height: auto;
-            border-radius: 1rem;
-        
-            box-shadow: .5rem .5rem rgb(197, 197, 197);
-            
-        
-            margin-bottom: 2rem;
-            transition: transform .2s;
-            
+            border-radius: 3rem;
+            margin-left: -2rem;
+            margin-top: 2rem;
             margin-bottom: 2rem;
         }
-        .blog-thumb:hover{
+        .event-bg:hover{
             transform: scale(1.05,1.05);
         }
-        
-        .single-blog{
-            border: .05rem solid black ;
-            border-radius: 2rem;
-            margin-top: 2rem;
-        
-            padding: 2rem;
+
+        .section-div{
             transition: transform .2s;
             background-color: azure;
+            border-radius: 3rem;
+            margin-top: 2rem;
             margin-bottom: 2rem;
             align-items: center;
         }
-        .single-blog:hover{
+        .section-div:hover{
             transform: scale(1.05,1.05);
         }
         
-        
-        .button{
-            border: .05rem solid black;
-            border-radius: .5rem;
-            padding-left: .75rem;
-            padding-right: .75rem;
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-        
-            box-shadow: .25rem .25rem rgb(197, 197, 197);
 
+        .event-content{
             transition: transform .2s;
-            background-color: rgb(188, 255, 255);
-            
-            align-items: center;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+            padding-left: 5%;
+            align-content: center;
         }
-        .button:hover{
-            background-color: rgb(97, 255, 255);
-            box-shadow: .15rem .15rem rgb(197, 197, 197);
-            transform: scale(1.25,1.25);
+        .event-content:hover{
+            transform: scale(1.05,1.05);
         }
 
-        /* @media screen { min-width: none; max-width: 40rem;
-            .blog-thumb{
-                width: 25rem;
-                height: auto;
-                border-radius: 1rem;
-            
-                box-shadow: .5rem .5rem rgb(197, 197, 197);
-                
-            
-                margin-bottom: 2rem;
-                transition: transform .2s;
-                
-                margin-bottom: 2rem;
-            }
-            .blog-thumb:hover{
-                transform: scale(1.05,1.05);
-            }   
-        } */
+
+        .yt-link{
+            border-radius: 3rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
         
     </style>
 {% endblock css %}
-    
 
 {% block content %}
 
-    <section class="blog-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="blog-area">
-                        <div class="row">
-                        
-                            {% for blog in blogs %}
-                                <div class="col-sm-6">
-                                    <div class="single-blog">
-                                        <div>
-                                            <img class="blog-thumb" src="https://drive.google.com/uc?export=view&id={{ blog.bg_image_id }}" alt="">
-                                        </div>
-                                        <h4 class="blog-title">{{ blog.title }}</h4>
-                                        <p class="blog-meta">{{ blog.author }} , {{ blog.date_posted|date:"F d, Y" }}</p>
-                                        <p>{{ blog.content }}</p>
-                                        
-                                        <button class="button">
-                                            <a class="blog-link" href="{% url 'blog:blog_detail' blog.id %}">Read More</a>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                            {% endfor %}
-                        </div>
-                    </div>
+    
+
+<section id="events" class="section-padding why-choose-us pb-70">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 ">
+                <div class="section-title text-center">
+                    <h2>Events</h2>
+                    <p>We are organizing many events to achieve a student alumni community, to help them benefit from each other.</p>
                 </div>
             </div>
         </div>
-    </section>
-      
-                        
+        <!-- //Section Title -->
+        <div class="row" >
+            
+            {% for category in categorys %}
 
+
+         
+                    <div class="col-md-6" style="margin-top: 2rem; margin-bottom: 2rem;">
+                        <div class="single-why-me why-me-right">
+                            <br>
+                            
+                            <br>
+                            <div class="why-me-icon">
+                                <div class="d-table">
+                                    <div class="d-table-cell">
+
+                                       
+                                        <a target="_blank" href="{% url 'categorys:events_detail_str' category.id %}">
+                                            <!-- Works for id only not for str -->
+                                        <!-- <a target="_blank" href="{% url 'categorys:events_detail_str' category.name %}"> -->
+                                            
+                                            <img class="article-img" src="{{category.icon.url}}" width="100px" height="100px" alt='No image'>
+                                            
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <h4>{{ category.name }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <br>
+                        </div>
+                    </div>
+            
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+    
 {% endblock content %}
+    

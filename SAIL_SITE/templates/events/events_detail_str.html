@@ -1,0 +1,97 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  SAIL | {{evnts}}
+{% endblock title %}
+  
+
+{% block content %}
+
+  <style>
+    .dropdown {
+    float: left;
+    font-size: 16px;  
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding: 5px 15px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 5;
+    } 
+    .dropdown-content a {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+    .dropdown-content a:hover {
+          background-color: #3AAFA9;
+        }
+
+    .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+    #hover-work{
+      transition: transform .2s;
+    }
+    #hover-work:hover{
+      transform: scale(1.05,1.05);
+    }
+    
+
+  </style>
+  
+  {% for category_evnt in category_evnts %}
+   
+    <section class="section-padding about-area bg-light" style="margin-left: 2rem; margin-right: 2rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 3rem;">
+      <div class="container">
+          <div class="row">
+              <div class="row flex-column-reverse flex-lg-row">
+                  <div class="col-lg-6 col-xs-12">
+                    <iframe id="hover-work"  src="{{category_evnt.link}}" width="600" height="85%" frameborder="0" src="http://www.iitg.ac.in/sail/assets/images/events/talk.jpg" style="border-radius: 3rem; margin-left: -3rem; margin-top: 2rem; margin-bottom: 2rem; "></iframe>
+                  </div>
+                  <div id="hover-work" class="col-lg-6 col-xs-12" style="background-color: azure; border-radius: 3rem; margin-top: 2rem; margin-bottom: 2rem;  align-items: center;">
+                      <div class="about-content">
+                          <div class="row justify-content-center">
+                              <div class="col-lg-6  col-xs-12">
+                                  <div  id="hover-work" class="text-center" style="margin-top:2rem;">
+                                    <h2>
+                                      <strong>
+                                        {{category_evnt.title}}
+                                      </strong>  
+                                    </h2>
+                                    
+                                  </div>
+                              </div>
+                          </div>
+                      <p  id="hover-work" style="padding-left:5%;margin-top: 2rem; margin-bottom: 2rem; margin-right: 2rem;  padding-left:5%; align-content: center;">
+                          {{category_evnt.content}}
+                      </p>
+                      <br>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+  {% endfor %}
+    
+    
+{% endblock content %}
+    

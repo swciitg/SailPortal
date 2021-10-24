@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  SAIL | {{category.name}}
+{% endblock title %}
+  
+
+{% block content %}
+
+
+  
+  {% if not category.events.all %}
+    Empty
+  
+  {% else %}
+    
+    {% for cat in category.events.all %}
+      <strong>
+        {{cat.title}}
+      </strong>
+
+      <iframe src="{{cat.link}}" width="400" height="300" frameborder="0"></iframe>
+      
+
+      {{cat.content}}
+
+    {% endfor %}
+      
+  {% endif %}
+    
+
+   
+   {% for event in categorys.events.all %}
+<!-- 
+   
+   {% if not event.category %}
+     
+   {% endif %}
+      -->
+     
+     <h1>
+       {{event.title}}
+     </h1>
+      <iframe src="{{event.link}}" width="400" height="300" frameborder="0"></iframe>
+     <h1>
+       {{event.content}}
+     </h1>
+   {% endfor %}
+     
+
+    
+{% endblock content %}
+    

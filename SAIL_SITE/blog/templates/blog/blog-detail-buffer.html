@@ -17,7 +17,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <title>Blog | Title</title>
   </head>
-  
   <style>
 	body{
             background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
@@ -97,9 +96,22 @@
 		width: max-content;
 	}
 
+  .hover-work{
+      transition: transform .2s;
+    }
+    .hover-work:hover{
+      transform: scale(1.05,1.05);
+    }
+    
 
 	
 	</style>
+
+  {% block css %}{% endblock css %}
+
+
+  <!-- ------------------------------------------------------------------------------------ -->
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
@@ -125,47 +137,76 @@
         </div>
       </nav>
 
-      
      
-      
-      <br>
-      <div class="title">
+        <!-- -------------------------------------------------------------------------------------- -->
+        
+        <section id="alumnitalk" class="section-padding about-area bg-light" style="margin-left: 2rem; margin-right: 2rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 3rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="row flex-column-reverse flex-lg-row">
+                        <div  class="popup col-lg-6 col-xs-12">
+                            <!-- <div class="about-bg" style="background-image:url(assets/images/events/talk.jpg)"></div> -->
+                            <img id="back" class="hover-work" src="http://www.iitg.ac.in/sail/assets/images/events/talk.jpg" style="width: 35rem; height: auto; border-radius: 3rem; margin-left: -2rem; margin-top: 2rem; margin-bottom: 2rem; " alt="">
+                        </div>
+                        <div class="hover-work col-lg-6 col-xs-12" style="background-color: azure; border-radius: 3rem; margin-top: 2rem; margin-bottom: 2rem;  align-items: center;">
+                            <div class="about-content">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6  col-xs-12">
+                                        <div class="hover-work section-title text-center" style="margin-top: 2rem;">
+                                            <h2>Alumni Talk</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            <p class="hover-work" style="margin-top: 2rem; margin-bottom: 2rem; margin-right: 2rem;  padding-left:5%; align-content: center;">
+                                Alumni from various sectors are invited to the campus to interact with the IITG student community.
+                                This event is purposefully designed to cater to the needs of the students and answer their queries
+                                about career options, placements, pursuing interests, academia, etc. Students are invited to participate
+                                in the events and discussions and make the best use of the opportunity to learn and experience the perspective
+                                of their alumnus/alumna.
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	      <h1 class="title-text" style="opacity: 100%;">Test Cricket In the 21st Century</h1>
-      </div>
-	
-      	<blockquote class="quote">
-		<p id="9bf5" class="quote-text" data-selectable-paragraph="">In a brand new blog, team SAIL brings to you all, the journey of Aman Dalmia, batch of 2018, while building a startup during his sophomore year, how the experience changed him and the lessons he learned.</p>
-		<p>
-			HI there!!!
-		</p>
-	</blockquote>
-	<section class="blog-body">
-		A lot of the memories I have of my IIT Guwahati experience involve the countless hours I spent in the TV Room watching sports (mostly Cricket). My love for the sport grew by leaps and bounds during the 4 years I spent there. Everyone in IIT is fortunate to have experienced at least one Cricket World Cup during their time there. I particularly envy those who experienced the 2011 WC, as I am sure it must have been fantabulous. My love for the game and statistics inspired me to write this article.
-
-	The recently concluded India vs New Zealand Test series brought back a lot of memories for me like waking up at 4 AM to watch Test matches Down Under. Although I didn’t do that now(not willing to put the effort), it got me thinking, are Test matches more interesting to watch now or were they more exciting back then? It is very difficult to measure excitement as it is a subjective thing, but I decided to look at all the Test matches from 2000–2020 and see what insights I can find.
-
-	It is very important for Test Cricket to be exciting at this time, especially after the incredible rise of T20 cricket, and talks of a new format like the T10 cricket. When the game is getting shorter and shorter, the longest format of the game has its task cut out to stay relevant. With that being said, the introduction of Test Championship added extra meaning to each Test and series, in the bigger picture and not just for rankings.
-
-	To start off, I looked at how many matches are ending in results i.e., the percentage of test matches that ended in a result, along with the number that ended in a draw for each of the last 20 years.
-	</section>
-	
-	<button class="button">
-		<a href="">Read More</a>
-	</button>
-	
-	<!-- <div class="button">
-		<a class="btn btn-outline-info mb-4" href=""  >Read on "Medium"</a>
-	</div>
-	<a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Read on "Medium"</a>
-
- -->
-
-      <br>
-     
-      
-      
-
+        <section id="alumnitalk" class="section-padding about-area bg-light" style="margin-left: 2rem; margin-right: 2rem; margin-top: 2rem; margin-bottom: 2rem; border-radius: 3rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="row flex-column-reverse flex-lg-row">
+                        
+                        <div class="hover-work col-lg-6 col-xs-12" style="background-color: azure; border-radius: 3rem;  margin-top: 2rem; margin-bottom: 2rem;  align-items: center;">
+                            <div class="about-content">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-6  col-xs-12">
+                                        <div class="hover-work section-title text-center" style="margin-top: 2rem;">
+                                            <h2>Alumni Talk</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                              <p class="hover-work" style="margin-top: 2rem; margin-bottom: 2rem; margin-right: 2rem;  padding-left:5%; align-content: center;">
+                                  Alumni from various sectors are invited to the campus to interact with the IITG student community.
+                                  This event is purposefully designed to cater to the needs of the students and answer their queries
+                                  about career options, placements, pursuing interests, academia, etc. Students are invited to participate
+                                  in the events and discussions and make the best use of the opportunity to learn and experience the perspective
+                                  of their alumnus/alumna.
+                              </p>
+                              <br>
+                            </div>
+                        </div>
+                        <div  class="col-lg-6 col-xs-12">
+                          <!-- <iframe src="https://youtu.be/Vx9rHwp-ScE" style="width: 35rem; height: auto; border-radius: 3rem;  margin-left: 2rem; margin-top: 2rem; margin-bottom: 2rem; " frameborder="0"></iframe> -->
+                          <iframe class="hover-work" width="550rem" height="350rem" src="https://www.youtube.com/embed/Vx9rHwp-ScE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style=" border-radius: 3rem;  margin-left: 2rem; margin-top: 2rem; margin-bottom: 2rem;"></iframe>
+                          <!-- <img id="back" class="hover-work" src="http://www.iitg.ac.in/sail/assets/images/events/talk.jpg" style="width: 35rem; height: auto; border-radius: 3rem;  margin-left: 2rem; margin-top: 2rem; margin-bottom: 2rem; " alt=""> -->
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- -------------------------------------------------------------------------------------- -->
+        
 
       <!-- Footer -->
 <footer class="page-footer font-small stylish-color-dark pt-4">
@@ -309,7 +350,14 @@
   <!-- Footer -->
       
       {% block js %}{% endblock js %}
-        
+
+      <!-- --------------------- Pop-Up --------------------------------- -->
+
+      <script src="./pop-up.js" ></script>
+
+
+      <!-- ------------------------------------------------------ -->
+      
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
