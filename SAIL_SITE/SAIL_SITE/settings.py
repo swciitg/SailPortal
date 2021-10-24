@@ -15,6 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = BASE_DIR/'templates'
+STATIC_DIR = BASE_DIR/'static'
 
 
 # Quick-start development settings - unsuitable for production
@@ -78,7 +79,7 @@ ROOT_URLCONF = 'SAIL_SITE.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR,],
+        'DIRS': [TEMPLATES_DIR,STATIC_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,7 +144,7 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
-STATIC_DIR = BASE_DIR/'static'
+
 STATICFILES_DIRS = [STATIC_DIR,]
 MEDIA_ROOT = BASE_DIR/'media'
 CKEDITOR_UPLOAD_PATH = "blog/"
