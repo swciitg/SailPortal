@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+    Events | Home
+{% endblock title %}
+    
+
+{% block css %}
+    <style>
+        body{
+            background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .section-title{
+            background-color: aquamarine;
+            opacity: 80%;
+            border-radius: 2rem;
+            padding: 2rem 2rem 2rem 2rem;
+            transition: transform .2s;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+        .section-title:hover{
+            transform: scale(1.05,1.05);
+        }
+
+        .single-why-me{
+            background-color: rgb(141, 248, 243);
+            border-radius: 1.5rem;
+            opacity: 80%;
+            transition: transform .2s;
+        }
+        .single-why-me:hover{
+            transform: scale(1.05,1.05);
+        }
+        .section{
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 3rem;
+        }
+
+        .event-bg{
+            transition: transform .2s;
+            width: 30rem;
+            height: auto;
+            border-radius: 3rem;
+            margin-left: -2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .event-bg:hover{
+            transform: scale(1.05,1.05);
+        }
+
+        .section-div{
+            transition: transform .2s;
+            background-color: azure;
+            border-radius: 3rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+        .section-div:hover{
+            transform: scale(1.05,1.05);
+        }
+        
+
+        .event-content{
+            transition: transform .2s;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+            padding-left: 5%;
+            align-content: center;
+        }
+        .event-content:hover{
+            transform: scale(1.05,1.05);
+        }
+
+
+        .yt-link{
+            border-radius: 3rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        
+    </style>
+{% endblock css %}
+
+{% block content %}
+
+    
+
+<section id="events" class="section-padding why-choose-us pb-70">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 ">
+                <div class="section-title text-center">
+                    <h2>Events</h2>
+                    <p>We are organizing many events to achieve a student alumni community, to help them benefit from each other.</p>
+                </div>
+            </div>
+        </div>
+        <!-- //Section Title -->
+        <div class="row" >
+            
+            {% for category in categorys %}
+
+
+         
+                    <div class="col-md-6" style="margin-top: 2rem; margin-bottom: 2rem;">
+                        <div class="single-why-me why-me-right">
+                            <br>
+                            
+                            <br>
+                            <div class="why-me-icon">
+                                <div class="d-table">
+                                    <div class="d-table-cell">
+
+                                       
+                                        <a target="_blank" href="{% url 'categorys:events_detail_str' category.id %}">
+                                            <!-- Works for id only not for str -->
+                                        <!-- <a target="_blank" href="{% url 'categorys:events_detail_str' category.name %}"> -->
+                                            
+                                            <img class="article-img" src="{{category.icon.url}}" width="100px" height="100px" alt='No image'>
+                                            
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <h4>{{ category.name }}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            
+                            <br>
+                        </div>
+                    </div>
+            
+
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+
+    
+{% endblock content %}
+    

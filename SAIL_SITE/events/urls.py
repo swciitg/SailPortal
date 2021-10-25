@@ -1,5 +1,6 @@
 from django.urls import path, reverse_lazy
-
+from events import views
+from .views import EventListView,EventDetailView
 app_name='events'
 app_name = 'categorys'
 urlpatterns = [
