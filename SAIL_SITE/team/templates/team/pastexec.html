@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Team | SAIL | Past Executives{% endblock title %}
+
+{% block css %}
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+</style>
+{% endblock css %}
+  
+{% block content %}
+<br><br>
+<center><h1>Past General Secretaries</h1></center><br>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4">
+    {% for team_member in memberList %}
+    <div class="col mb-4">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <figure>
+        <img src="https://drive.google.com/uc?export=view&id={{team_member.pic_id}}" alt="{{team_member.name}}" style="border-radius: 50%; height: 15rem; width: 15rem;">
+        <h5 class="mt-4 mb-3" align="center">
+          <p class="text"><strong style="font-weight: bold;">{{team_member.name}}</strong></p>
+          {{team_member.position}}<br>
+          {{team_member.year}}<br>
+        </h5>
+      </figure>
+    </div>
+    {% endfor %}
+  </div>  
+</div>  
+{% endblock content %}
