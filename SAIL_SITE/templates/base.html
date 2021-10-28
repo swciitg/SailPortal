@@ -75,15 +75,17 @@ width: 5rem;
   padding-right: 1rem;
 }
 }
-    .page-footer{
-			opacity: 50%;
+    #footer{
+			opacity: 40%;
+      background-color: rgba(0,0,0,0.5);
 			
 		}
-		.page-footer:hover{
+		#footer:hover{
 			opacity: 95%;
 			transition: linear;
 			transition-duration: .25s;
 		}
+    
   
     .dropdown {
     float: left;
@@ -120,6 +122,7 @@ width: 5rem;
           display: block;
         }
   
+        
   </style>
   {% block css %} {% endblock css %}
   
@@ -128,182 +131,187 @@ width: 5rem;
   <body data-target="#navbarResponsive">
     <div class="container-fluid">
 			<div class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
-				<a class="navbar-brand" href="#"> <img
-      src="http://iitg.ac.in/sail/assets/images/logo.png"
-      width="10%" height="10%" alt=""></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-      <span class="navbar-toggler-icon" style="color:white;"></span>
-      </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-          <a class="nav-link" style="color: white;" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: white;" aria-current="page" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: white;" aria-current="page" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: white;" aria-current="page" href="#">Initiatives</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: white;" aria-current="page" href="#">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: white;" aria-current="page" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'team:SailTeam'%}">Team</a>
-        </li>
-				</ul>
-			</div>
+				  <a class="navbar-brand" href="#"> 
+            <img src="http://iitg.ac.in/sail/assets/images/logo.png" width="10%" height="10%" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon" style="color:white;"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'home:home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'home:about' %}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" aria-current="page" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'initiatives:initiatives' %}">Initiatives</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'categorys:events-home'%}">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'blog:blog-home' %}">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'team:SailTeam'%}">Team</a>
+              </li>
+              </ul>
+          </div>
       </div>
 
       
       {% block content %}{% endblock content %}
         
       <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4">
 
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left">
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-4 mx-auto">
-  
-          <!-- Content -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-          <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-            consectetur
-            adipisicing elit.</p>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none">
-  
-        <!-- Grid column -->
-        <div class="col-md-2 mx-auto">
-  
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none">
-  
-        <!-- Grid column -->
-        <div class="col-md-2 mx-auto">
-  
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none">
-  
-        <!-- Grid column -->
-        <div class="col-md-2 mx-auto">
-  
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
+      <!-- Remove the container if you want to extend the Footer to full width. -->
+      <div class="container-fluid">
+        <!-- Footer -->
+        <footer  id="footer" class="text-center text-lg-start text-white" style="background-color: #45526e" >
+          <!-- Grid container -->
+          <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+              <!--Grid row-->
+              <div class="row">
+                <!-- Grid column -->
+                
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <img src="" alt="iitg logo">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">
+                    Indian Institute of Technology Guwahati
+                  </h6>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto quidem itaque esse dicta architecto quam sint vel ipsam a ipsum similique qui voluptas dolorem labore voluptates necessitatibus eveniet nulla!
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                  <p>
+                    <a class="text-white">MDBootstrap</a>
+                  </p>
+                  <p>
+                    <a class="text-white">MDWordPress</a>
+                  </p>
+                  <p>
+                    <a class="text-white">BrandFlow</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Bootstrap Angular</a>
+                  </p>
+                </div>
+                <!-- Grid column -->
+
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">
+                    Useful links
+                  </h6>
+                  <p>
+                    <a class="text-white">Your Account</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Become an Affiliate</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Shipping Rates</a>
+                  </p>
+                  <p>
+                    <a class="text-white">Help</a>
+                  </p>
+                </div>
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                  <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                  <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                  <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                  <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+              </div>
+              <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+
+            <hr class="my-3">
+
+            <!-- Section: Copyright -->
+            <section class="p-3 pt-0">
+              <div class="row d-flex align-items-center">
+                <!-- Grid column -->
+                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                  <!-- Copyright -->
+                  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+                    <a href="https://mdbootstrap.com/"> SAIL IIT Guwahati</a>
+                  </div>
+                  <!-- Copyright -->
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                  <!-- Facebook -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fab fa-facebook-f"></i
+                    ></a>
+
+                  <!-- Twitter -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fab fa-twitter"></i
+                    ></a>
+
+                  <!-- Google -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fab fa-google"></i
+                    ></a>
+
+                  <!-- Instagram -->
+                  <a
+                    class="btn btn-outline-light btn-floating m-1"
+                    class="text-white"
+                    role="button"
+                    ><i class="fab fa-instagram"></i
+                    ></a>
+                </div>
+                <!-- Grid column -->
+              </div>
+            </section>
+            <!-- Section: Copyright -->
+          </div>
+          <!-- Grid container -->
+        </footer>
+        <!-- Footer -->
       </div>
-      <!-- Grid row -->
-  
-    </div>
-    <!-- Footer Links -->
-  
-   <hr>
-  <!-- this is test -->
-    <!-- Social buttons -->
-    <ul class="list-unstyled list-inline text-center">
-      <li class="list-inline-item">
-        <a class="btn-floating btn-fb mx-1">
-          <i class="fab fa-facebook-f"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-tw mx-1">
-          <i class="fab fa-twitter"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-li mx-1">
-          <i class="fab fa-linkedin-in"> </i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="btn-floating btn-dribbble mx-1">
-          <i class="fab fa-dribbble"> </i>
-        </a>
-      </li>
-    </ul>
-    <!-- Social buttons -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2021 Copyright:
-      <a href="https://mdbootstrap.com/"> SAIL IIT Guwahati</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
+<!-- End of .container -->
+
+
       
       {% block js %}{% endblock js %}
         
@@ -316,6 +324,11 @@ width: 5rem;
         e.preventDefault();
         });</script>
     
+    <script>
+      $(window).scroll(function(){
+        $('nav').toggleClass('scrolled',$(this).scrollTop()>30);
+      })
+    </script>
     {% block share-options %}
       
     {% endblock share-options %}
