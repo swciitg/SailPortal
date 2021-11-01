@@ -1,0 +1,92 @@
+
+*.pyc
+*.virtualenv
+*.cfg
+.DS_Store
+SAIL_SITE/blog/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/blog/__pycache__/admin.cpython-39.pyc
+SAIL_SITE/blog/__pycache__/apps.cpython-39.pyc
+SAIL_SITE/blog/__pycache__/models.cpython-39.pyc
+SAIL_SITE/blog/__pycache__/urls.cpython-39.pyc
+SAIL_SITE/blog/__pycache__/views.cpython-39.pyc
+SAIL_SITE/blog/migrations/__pycache__/__init__.cpython-38.pyc
+SAIL_SITE/blog/migrations/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/events/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/events/__pycache__/admin.cpython-39.pyc
+SAIL_SITE/events/__pycache__/apps.cpython-39.pyc
+SAIL_SITE/events/__pycache__/models.cpython-39.pyc
+SAIL_SITE/events/__pycache__/urls.cpython-39.pyc
+SAIL_SITE/home/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/home/__pycache__/admin.cpython-39.pyc
+SAIL_SITE/home/__pycache__/apps.cpython-39.pyc
+SAIL_SITE/home/__pycache__/models.cpython-39.pyc
+SAIL_SITE/home/__pycache__/urls.cpython-39.pyc
+SAIL_SITE/home/__pycache__/views.cpython-39.pyc
+SAIL_SITE/home/migrations/__pycache__/__init__.cpython-38.pyc
+SAIL_SITE/home/migrations/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/initiatives/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/initiatives/__pycache__/admin.cpython-39.pyc
+SAIL_SITE/initiatives/__pycache__/apps.cpython-39.pyc
+SAIL_SITE/initiatives/__pycache__/models.cpython-39.pyc
+SAIL_SITE/initiatives/__pycache__/urls.cpython-39.pyc
+SAIL_SITE/initiatives/__pycache__/views.cpython-39.pyc
+SAIL_SITE/lib/python3.8/site-packages/django_cleanup 2/__init__.py
+SAIL_SITE/lib/python3.8/site-packages/django_cleanup 2/apps.py
+SAIL_SITE/lib/python3.8/site-packages/django_cleanup 2/cleanup.py
+SAIL_SITE/lib/python3.8/site-packages/django_cleanup 2/signals.py
+SAIL_SITE/lib/python3.8/site-packages/easy_install 2.py
+SAIL_SITE/lib/python3.8/site-packages/js_asset 2/__init__.py
+SAIL_SITE/lib/python3.8/site-packages/pip-20.0.2 2.virtualenv
+SAIL_SITE/lib/python3.8/site-packages/pkg_resources 2/py31compat.py
+SAIL_SITE/lib/python3.8/site-packages/pkg_resources-0.0.0 2.dist-info/INSTALLER
+SAIL_SITE/lib/python3.8/site-packages/pkg_resources-0.0.0 2.dist-info/LICENSE.txt
+SAIL_SITE/lib/python3.8/site-packages/pkg_resources-0.0.0 2.dist-info/METADATA
+SAIL_SITE/lib/python3.8/site-packages/pkg_resources-0.0.0 2.dist-info/WHEEL
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Africa/Bamako
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Africa/Dakar
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Africa/Lusaka
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Africa/Maputo
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Africa/Timbuktu
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/America/Montserrat
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/America/St_Lucia
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+1
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+11
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+12
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+2
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+3
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+4
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+6
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT+8
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT-0
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT-10
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT-14
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT-6
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/GMT0
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Etc/Greenwich
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/GMT-0
+SAIL_SITE/lib/python3.8/site-packages/pytz 2/zoneinfo/Universal
+SAIL_SITE/lib/python3.8/site-packages/pytz-2021.1 2.dist-info/INSTALLER
+SAIL_SITE/lib/python3.8/site-packages/pytz-2021.1 2.dist-info/LICENSE.txt
+SAIL_SITE/lib/python3.8/site-packages/pytz-2021.1 2.dist-info/top_level.txt
+SAIL_SITE/lib/python3.8/site-packages/pytz-2021.1 2.dist-info/WHEEL
+SAIL_SITE/lib/python3.8/site-packages/pytz-2021.1 2.dist-info/zip-safe
+SAIL_SITE/pyvenv 2.cfg
+SAIL_SITE/SAIL_SITE/__pycache__/__init__.cpython-38.pyc
+SAIL_SITE/SAIL_SITE/__pycache__/settings.cpython-38.pyc
+SAIL_SITE/SAIL_SITE/__pycache__/urls.cpython-38.pyc
+SAIL_SITE/services/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/services/__pycache__/admin.cpython-39.pyc
+SAIL_SITE/services/__pycache__/apps.cpython-39.pyc
+SAIL_SITE/services/__pycache__/models.cpython-39.pyc
+SAIL_SITE/services/__pycache__/urls.cpython-39.pyc
+SAIL_SITE/services/__pycache__/views.cpython-39.pyc
+SAIL_SITE/services/migrations/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/team/__pycache__/__init__.cpython-39.pyc
+SAIL_SITE/team/__pycache__/admin.cpython-39.pyc
+SAIL_SITE/team/__pycache__/apps.cpython-39.pyc
+SAIL_SITE/team/__pycache__/models.cpython-39.pyc
+SAIL_SITE/team/__pycache__/urls.cpython-39.pyc
+SAIL_SITE/team/__pycache__/views.cpython-39.pyc
+SAIL_SITE/team/migrations/__pycache__/0001_initial.cpython-39.pyc
+SAIL_SITE/team/migrations/__pycache__/__init__.cpython-39.pyc
+*.pth
