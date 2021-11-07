@@ -112,16 +112,15 @@
     
 
 {% block content %}
-
+    
     <section class="blog-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="blog-area">
-                        <div class="row">
-                        
+        <div class="container-fluid pl-20 pr-20">
+            
+                    <div class="blog-area" style="padding-top: 55px;">
+                        <div class="row justify-content-center">
+                    
                             {% for blog in blogs %}
-                                <div class="col-sm-6">
+                                <div class="col-sm-5">
                                     <div class="single-blog">
                                         <div>
                                             <img class="blog-thumb" src="https://drive.google.com/uc?export=view&id={{ blog.bg_image_id }}" alt="">
@@ -137,10 +136,11 @@
                                 </div>
                                 
                             {% endfor %}
+                        
+                            
                         </div>
                     </div>
-                </div>
-            </div>
+               
         </div>
     </section>
       
