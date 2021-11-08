@@ -88,14 +88,13 @@
 		.button{
 			background-color: cyan;
 			border-radius: .5rem;
-			margin: 0 40% 2rem ;
-			width: max-content;
-			box-shadow: .25rem .25rem rgb(197, 197, 197);
+			height: 40px;
+			width: 250px;
 			transition: transform .2s;
 		}
 		.button:hover{
 			background-color: chartreuse;
-			transform: scale(1.5,1.5);
+			transform: scale(1.25,1.25);
 		}
 	</style>
 {% endblock css %}
@@ -103,7 +102,7 @@
 
 {% block content %}
 
-	<section class="blog-body">
+	<section class="blog-body" style="padding-top: 55px;">
 		<div class="title">
 			<h1 class="title-text">{{object.title}}</h1>
 		</div>
@@ -122,9 +121,16 @@
 			{{ object.body|safe }}
 		</div>
 	</section>
-	<button class="button">
-		<a target="_blank" href="{{ object.blog_link }}">Read on Medium</a>		
-	</button>
+	<div class="row" style="display: flex; align-items: center; justify-content: center; padding-top:10px;padding-bottom:30px;height: 80px;width: 100%;">
+
+		<button class="button">
+			
+				<a target="_blank" href="{{ object.blog_link }}">
+					Read on Medium
+				</a>		
+			
+		</button>
+	</div>
 	
 	
 {% endblock content %}

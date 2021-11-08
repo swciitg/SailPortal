@@ -33,6 +33,13 @@
 	font-family: 'Roboto',sans-serif;
   overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
+body{
+  -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+}
 .navbar{
   background-color: rgba(0,0,0,0.6)!important;
   padding-left: 4rem;
@@ -75,16 +82,7 @@ width: 5rem;
   padding-right: 1rem;
 }
 }
-    #footer{
-			opacity: 40%;
-      background-color: rgba(0,0,0,0.5);
-			
-		}
-		#footer:hover{
-			opacity: 95%;
-			transition: linear;
-			transition-duration: .25s;
-		}
+    
     
   
     .dropdown {
@@ -147,7 +145,7 @@ width: 5rem;
                 <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'home:about' %}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" style="color: white;" aria-current="page" href="#">Services</a>
+                <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'services:services' %}">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" style="color: white;" aria-current="page" href="{% url 'initiatives:initiatives' %}">Initiatives</a>
@@ -171,96 +169,80 @@ width: 5rem;
       <!-- Footer -->
 
       <!-- Remove the container if you want to extend the Footer to full width. -->
-      <div class="container-fluid">
+      <div>
         <!-- Footer -->
-        <footer  id="footer" class="text-center text-lg-start text-white" style="background-color: #45526e" >
+        <footer  id="footer" class="text-center text-lg-start text-white" style="background-color: #252b38; padding-top: 20px;padding-bottom: 10px;" >
           <!-- Grid container -->
-          <div class="container p-4 pb-0">
+          <div >
             <!-- Section: Links -->
             <section class="">
               <!--Grid row-->
-              <div class="row">
+              <div class="row justify-content-around">
                 <!-- Grid column -->
                 
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <img src="" alt="iitg logo">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">
-                    Indian Institute of Technology Guwahati
+                <div class="col-md-6 col-xs-12 col-lg-6 col-sm-6">
+                  <img class="img-responsive float-left pl-3" alt="iitg" src="{% static 'images/iitgfooter.png' %}" width="100px">
+                  <h6 class="text-uppercase mb-4 pt-2 font-weight-bold">
+                    Indian Institute of Technology Guwahati, Guwahati - 781039, Assam, India
                   </h6>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iusto quidem itaque esse dicta architecto quam sint vel ipsam a ipsum similique qui voluptas dolorem labore voluptates necessitatibus eveniet nulla!
-                  </p>
+                  
+                  <hr class="w-100 clearfix d-md-none" />
+                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                  <p><i class="fas fa-home mr-3"></i> Guwahati - 781039, Assam, India</p>
+                  <p><i class="fas fa-envelope mr-3"></i> <a class="text-gray" href="#">peeroff@iitg.ac.in</a></p>
+                  <p><i class="fas fa-phone mr-3"></i> <a class="text-gray" href="#">+91-361-2584000</a></p>
+                  
                 </div>
                 <!-- Grid column -->
-
+                 
+                <!-- Grid column -->
                 <hr class="w-100 clearfix d-md-none" />
 
                 <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-                  <p>
-                    <a class="text-white">MDBootstrap</a>
-                  </p>
-                  <p>
-                    <a class="text-white">MDWordPress</a>
-                  </p>
-                  <p>
-                    <a class="text-white">BrandFlow</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Bootstrap Angular</a>
-                  </p>
-                </div>
-                <!-- Grid column -->
-
-                <hr class="w-100 clearfix d-md-none" />
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <div class="col-md-2 col-xs-12 col-lg-3 col-sm-6 pt-2">
                   <h6 class="text-uppercase mb-4 font-weight-bold">
                     Useful links
                   </h6>
-                  <p>
-                    <a class="text-white">Your Account</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Become an Affiliate</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Shipping Rates</a>
-                  </p>
-                  <p>
-                    <a class="text-white">Help</a>
-                  </p>
+                  
+                  <p><a class="text-white" target="_blank" href="http://www.iitg.ac.in/">IIT Guwahati</a></p>
+                  <p><a class="text-white" target="_blank" href="http://www.iitg.ac.in/aa/newsite/home_final.php">Alumni & External Relations</a></p>
+                  <p><a class="text-white" target="_blank" href="http://iitgaa.org/">IITG Alumni Association</a></p>
+                  <p><a class="text-white" target="_blank" target="_blank" href="SAIL _ Startups.html">Startups of IITG Alumni</a></p>
+                  <p><a class="text-white" target="_blank" href="http://www.iitg.ac.in/pro/internet/convo_all">Convocation Speeches and Documents</a></p>
+                  
                 </div>
-
                 <!-- Grid column -->
+
                 <hr class="w-100 clearfix d-md-none" />
 
                 <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                  <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                  <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-                  <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                  <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-                </div>
-                <!-- Grid column -->
+                <div class="col-md-2 col-xs-12 col-lg-3 col-sm-6 pt-2">
+                  <h6 class="text-uppercase mb-4 font-weight-bold">
+                    Useful links
+                  </h6>
+                  
+                  <p><a class="text-white" target="_blank" href="https://www.iitg.ac.in/stud/gymkhana/">Student Gymkhana</a></p>
+                  <p><a class="text-white" target="_blank" href="http://www.iitg.ac.in/acad/">Academic Affairs</a></p>
+                  <p><a class="text-white" target="_blank" href="http://www.iitg.ac.in/stud/gymkhana/hostelBoard/hab.html">HAB</a></p>
+                  <p><a class="text-white" target="_blank" href="http://www.iitg.ac.in/home/pagesint/9">Administration</a></p>
+                  <p><a class="text-white" target="_blank" href="https://www.iitg.ac.in/phones/">Telephone Directory</a></p>
+                </div>            
+               
               </div>
               <!--Grid row-->
             </section>
             <!-- Section: Links -->
 
-            <hr class="my-3">
+            
 
             <!-- Section: Copyright -->
-            <section class="p-3 pt-0">
+            <section class="">
               <div class="row d-flex align-items-center">
                 <!-- Grid column -->
                 <div class="col-md-7 col-lg-8 text-center text-md-start">
                   <!-- Copyright -->
-                  <div class="footer-copyright text-center py-3">© 2021 Copyright:
-                    <a href="https://mdbootstrap.com/"> SAIL IIT Guwahati</a>
+                  <div class="footer-copyright text-center py-3">© 2021 Copyright:  All rights reserved.
+                    <a href="#"> SAIL IIT Guwahati</a>
                   </div>
                   <!-- Copyright -->
                 </div>
@@ -284,12 +266,12 @@ width: 5rem;
                     ><i class="fab fa-twitter"></i
                     ></a>
 
-                  <!-- Google -->
+                  <!-- LinkedIn -->
                   <a
                     class="btn btn-outline-light btn-floating m-1"
                     class="text-white"
                     role="button"
-                    ><i class="fab fa-google"></i
+                    ><i class="fab fa-linkedin"></i
                     ></a>
 
                   <!-- Instagram -->
@@ -306,6 +288,7 @@ width: 5rem;
             <!-- Section: Copyright -->
           </div>
           <!-- Grid container -->
+          
         </footer>
         <!-- Footer -->
       </div>
