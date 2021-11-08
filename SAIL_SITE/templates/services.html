@@ -3,31 +3,85 @@
 
 {%block title%}SAIL | Services{% endblock title%}
 {% block css %}
+	<style>
+		body{
+            background-image: url("https://drive.google.com/uc?export=view&id=1N5S-vUKqUb4LJ6n_BMU4Fhu1Lwm7zpUd");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+		.section-title{
+            background-color: aquamarine;
+            opacity: 80%;
+            border-radius: 2rem;
+            padding: 2rem 2rem 2rem 2rem;
+            transition: transform .2s;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+        .section-title:hover{
+            transform: scale(1.05,1.05);
+			opacity: 90%;
+        }
+		.content{
+            background-color: rgb(14, 203, 236);
+            opacity: 80%;
+            border-radius: 2rem;
+            padding: 2rem 2rem 2rem 2rem;
+            transition: transform .2s;
+            
+            
+        }
+        .content:hover{
+            transform: scale(1.05,1.05);
+			opacity: 90%;
+        }
+		.a-link{
+			color: black;
+			transition: transform .2s;
+		}
+		a:hover{
+			color: white;
+			transform: scale(1.025,1.025);
+		}
+		#trn,#alm{
+			border-radius: 10px;
+		}
+		#trn:hover,#alm:hover{
+			color: white;
+			background-color: rgb(52, 52, 196);
+
+		}
+
+	</style>
+
 {% endblock css %}
 
 
 {% block content %}
-	<section class="section-padding" style="padding-top: 65px;">
+	<section class="section-padding" style="padding-top: 70px;padding-bottom: 20px;padding-left: 10vw; padding-right: 10vw;">
 		
-		<div class="row">
-			<div class="col">
-				<div>
+		<div class="row justify-content-between section-title" >
+			<div class="col-7">
+				<div style="font-size: 40px;padding-left: 2rem;">
 					ALUMNI SERVICES
 				</div>
-				<br>
-				<div>
+				
+				<div class="content" style="font-size: 19px;">
 					Relationship is a two way street. And the relationship of alumni and the students of IITG is no different. We, as students of your alma mater, are ready to help you SAIL you through any difficulties faced by you concerning IITG. It could be a major problem like Issuance of Original/Duplicate certificates, grade cards, requirement of Degree Transcripts urgently or a minor problem like visting the campus. We will be making available those transcripts and mailing them to you. We live by the motto "Guests are equivalent to GOD", so we will make sure that you do not face any problem throughout your stay at IITG campus.
 				</div>
 			</div>
-			<div class="col" style="display: flex; align-items: center; justify-content: center;">
-				<div class="row" style="height: 100px;">
-					<div class="col" style="border: solid 1px gray; display: flex;justify-content: start;">
-						<a href="https://www.iitg.ac.in/acad/cert/alumni.php?">
+			<div class="col-4" style="display: flex; align-items: center; justify-content: center;">
+				<div class="row justify-content-between" style="display: flex; align-items: center;">
+					<div class="col" id="trn" style="height: 100px;border: solid 1px gray; display: flex;align-items: center;text-align: end;">
+						<a class="a-link" href="https://www.iitg.ac.in/acad/cert/alumni.php?">
 							PROCEDURE TO GET TRANSCRIPTS
 						</a>
 					</div>
-					<div class="col" style="border: solid 1px gray; display: flex;justify-content: end;">
-						<a href="https://www.iitg.ac.in/aa/pages/alumcard.html">
+					<div class="col" id="alm" style="height: 100px;border: solid 1px gray; display: flex;align-items: center;text-align: start;">
+						<a class="a-link" href="https://www.iitg.ac.in/aa/pages/alumcard.html">
 							PROCEDURE TO GET ALUMNICARDS
 						</a>
 					</div>
