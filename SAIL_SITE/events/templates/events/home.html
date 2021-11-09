@@ -30,6 +30,7 @@
         }
         .section-title:hover{
             transform: scale(1.05,1.05);
+			opacity: 90%;
         }
 
         .single-why-me{
@@ -40,12 +41,13 @@
         }
         .single-why-me:hover{
             transform: scale(1.05,1.05);
+			opacity: 90%;
         }
         .section{
-            margin-left: 2rem;
-            margin-right: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             border-radius: 3rem;
         }
 
@@ -54,47 +56,53 @@
             width: 30rem;
             height: auto;
             border-radius: 3rem;
-            margin-left: -2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            padding-left: -2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
         .event-bg:hover{
             transform: scale(1.05,1.05);
+			opacity: 90%;
         }
 
         .section-div{
             transition: transform .2s;
             background-color: azure;
             border-radius: 3rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             align-items: center;
         }
         .section-div:hover{
             transform: scale(1.05,1.05);
+			opacity: 90%;
         }
         
 
         .event-content{
             transition: transform .2s;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            margin-right: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            padding-right: 2rem;
             padding-left: 5%;
             align-content: center;
         }
         .event-content:hover{
             transform: scale(1.05,1.05);
+			opacity: 90%;
         }
 
 
         .yt-link{
             border-radius: 3rem;
-            margin-left: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
+            padding-left: 2rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
         }
 
+        body > *::-webkit-scrollbar{
+            display: none;
+        }
         
     </style>
 {% endblock css %}
@@ -103,8 +111,8 @@
 
     
 
-<section id="events" class="section-padding why-choose-us pb-70">
-    <div class="container">
+<section id="events" class="section-padding why-choose-us pb-70" style="padding-top: 70px;">
+    
         <!-- Section Title -->
         <div class="row justify-content-center">
             <div class="col-lg-6 ">
@@ -115,46 +123,46 @@
             </div>
         </div>
         <!-- //Section Title -->
-        <div class="row" >
-            
-            {% for category in categorys %}
+        <div class="row justify-content-center"  >
+           
+                {% for category in categorys %}
+                    
 
+                
+                        <div class="col-md-5 align-items-center" style="padding-top: 2rem; padding-bottom: 2rem; ">
+                            <div class="single-why-me">
+                                <br>
+                                
+                                <br>
+                                    <div class="row justify-content-between" style="display: flex;justify-content: center;align-items: center;">
 
-         
-                    <div class="col-md-6" style="margin-top: 2rem; margin-bottom: 2rem;">
-                        <div class="single-why-me why-me-right">
-                            <br>
-                            
-                            <br>
-                            <div class="why-me-icon">
-                                <div class="d-table">
-                                    <div class="d-table-cell">
-
-                                       
-                                        <a target="_blank" href="{% url 'categorys:events_detail_str' category.id %}">
-                                            <!-- Works for id only not for str -->
-                                        <!-- <a target="_blank" href="{% url 'categorys:events_detail_str' category.name %}"> -->
-                                            
-                                            <img class="article-img" src="{{category.icon.url}}" width="100px" height="100px" alt='No image'>
-                                            
-                                        </a>
+                                        <div class="col-6">
+                                            <a target="_blank" href="{% url 'categorys:events_detail_str' category.id %}">
+                                                <!-- Works for id only not for str -->
+                                            <!-- <a target="_blank" href="{% url 'categorys:events_detail_str' category.name %}"> -->
+                                                
+                                                <img class="article-img " src="{{category.icon.url}}" width="100px" height="100px" alt='No image'>
+                                                
+                                            </a>
+                                        </div>
+                                        <div class="col-6"> 
+                                            <h4>{{ category.name }}</h4>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h4>{{ category.name }}</h4>
-                                    </div>
-                                </div>
+                                        
+                                <br>
+                                
+                                <br>
                             </div>
-                            <br>
-                            
-                            <br>
                         </div>
-                    </div>
-            
+                
 
-            {% endfor %}
+                   
+                {% endfor %}
+            
 
         </div>
-    </div>
+    
 </section>
 
     

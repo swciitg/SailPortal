@@ -24,7 +24,7 @@
         .dropdown-content {
           display: none;
           position: absolute;
-          background-color: #f9f9f9;
+          
           min-width: 160px;
           box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
           z-index: 5;
@@ -54,24 +54,42 @@
             margin-left: auto;
             margin-right: auto;
         }
+        .section-padding{
+            background-color: aquamarine;
+            opacity: 80%;
+            border-radius: 2rem;
+            margin: 2rem 10vw 2rem 10vw;
+            transition: transform .2s;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+        .section-padding:hover{
+            transform: scale(1.05,1.05);
+			opacity: 90%;
+        }
         </style>
     {% endblock css %}
     
     <body>
-    {%block content%}
+    {% block content %}
+    <br>
+    <br>
+    <br>
+    
     {% for x in pics %}
-     <section  class="section-padding about-area bg-light">
+     <section  class="section-padding about-area bg-light" style="padding-top: 20px; padding-bottom: 20px;">
             <div class="container">
                 <!-- Section Title -->
                 <!-- //Section Title -->
-                <div class="row">
+                
                   <div class="row flex-column-reverse flex-md-row">
-                      <div class="col-md-12 row">
-                          <div class="col-lg-6 col-xs-12">
+                      
+                          <div class="col-lg-5 col-xs-12">
                               <div class="about-bg" style="background-image:url({{x.image.url}});background-size:100% 100%;">
                               </div>
                           </div>
-                          <div class="col-lg-6 col-xs-12">
+                          <div class="col-lg-7 col-xs-12">
                               <div class="about-content">
                                   <div class="row justify-content-center">
                                       <div class="col-lg-6 col-xs-12">
@@ -82,9 +100,9 @@
                                   </div>
                                   {{x.desc|safe}}
                                   <br>
-                                  <br>
+                                  
                                   <div class="row justify-content-center">
-                                    <div class="col-lg-7 col-xs-12">
+                                    <div class="col-lg-7 col-xs-12 align-items-center" style="display: flex; align-items: center; justify-content: center;" >
                                         <div class="cta-button">
                                             <div class="d-table">
                                                 <div class="d-table-cell">
@@ -98,12 +116,14 @@
                                   </div>
                               </div>
                           </div>
-                      </div>
+      
                   </div>
-                </div>
+                
             </div>
         </section>
     
     {% endfor %}
 </body>
 {% endblock content%}
+
+

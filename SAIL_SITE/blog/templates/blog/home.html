@@ -28,9 +28,12 @@
         .blog-title{
             transition: transform .2s;
             margin-top: 2rem;
+            
         }
         .blog-title:hover{
             transform: scale(1.05,1.05);
+			
+			
         }
         
         .blog-thumb{
@@ -49,6 +52,7 @@
         }
         .blog-thumb:hover{
             transform: scale(1.05,1.05);
+			opacity: 90%;
         }
         
         .single-blog{
@@ -61,9 +65,11 @@
             background-color: azure;
             margin-bottom: 2rem;
             align-items: center;
+            opacity: 80%;
         }
         .single-blog:hover{
             transform: scale(1.05,1.05);
+			opacity: 90%;
         }
         
         
@@ -112,16 +118,15 @@
     
 
 {% block content %}
-
+    
     <section class="blog-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="blog-area">
-                        <div class="row">
-                        
+        <div class="container-fluid pl-20 pr-20">
+            
+                    <div class="blog-area" style="padding-top: 55px;">
+                        <div class="row justify-content-center">
+                    
                             {% for blog in blogs %}
-                                <div class="col-sm-6">
+                                <div class="col-sm-5">
                                     <div class="single-blog">
                                         <div>
                                             <img class="blog-thumb" src="https://drive.google.com/uc?export=view&id={{ blog.bg_image_id }}" alt="">
@@ -137,10 +142,11 @@
                                 </div>
                                 
                             {% endfor %}
+                        
+                            
                         </div>
                     </div>
-                </div>
-            </div>
+               
         </div>
     </section>
       
