@@ -113,37 +113,55 @@
 
 {% block content %}
     
-    <section class="blog-section">
-        <div class="container-fluid pl-20 pr-20">
-            
-                    <div class="blog-area" style="padding-top: 55px;">
-                        <div class="row justify-content-center">
-                    
-                            {% for blog in blogs %}
-                                <div class="col-sm-5">
-                                    <div class="single-blog">
-                                        <div>
-                                            <img class="blog-thumb" src="https://drive.google.com/uc?export=view&id={{ blog.bg_image_id }}" alt="">
-                                        </div>
-                                        <h4 class="blog-title">{{ blog.title }}</h4>
-                                        <p class="blog-meta">{{ blog.author }} , {{ blog.date_posted|date:"F d, Y" }}</p>
-                                        <p>{{ blog.content }}</p>
-                                        
-                                        <button class="button">
-                                            <a class="blog-link" href="{% url 'blog:blog_detail' blog.id %}">Read More</a>
-                                        </button>
-                                    </div>
-                                </div>
-                                
-                            {% endfor %}
-                        
-                            
-                        </div>
-                    </div>
-               
-        </div>
-    </section>
+    
       
-                        
+    <section id="about" class="section-padding about-area" style="margin: 2%">
+			
+			<div class="container">
+				<br>
+				<br>
+				<br>
+				<!-- //Section Title -->
+				<div class="row">
+					<div class="col-lg-10 ">
+						<div class="about-content text-muted">
+							<div class="page-title">Blogs
+							</div>
+							<br>
+		
+							<p>About Blogs ..... Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+						</div>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+                    {% for blog in blogs %}
+					<div class="col-lg-10 col-sm-10 col-xs-10 mt-4 mb-4">
+						<div class="row">
+							<img src="https://drive.google.com/uc?export=view&id={{ blog.bg_image_id }}" alt="">
+						</div>
+						<div class="row" style="background-color: #1E2532;">
+							<div class="col">
+								<div class="row text-white small font-weight-light m-1 p-1" >
+								{{ blog.date_posted|date:"F d, Y" }} | {{ blog.author }}
+								</div>
+								<div class="row text-white font-weight-bolder m-1 p-1">
+									{{ blog.title }}
+								</div>
+								<div style="display: flex; justify-content: end;">
+									<a href="{% url 'blog:blog_detail' blog.id %}" class="col-1">
+									<i class="fas fa-arrow-circle-right" aria-hidden="true"></i>
+								</a>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <br>
+                    <br>
+                    {% endfor %}
+				</div>
+			<br>
+			<br>
+		</section>                 
 
 {% endblock content %}
