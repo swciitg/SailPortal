@@ -1,147 +1,38 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Team | SAIL{% endblock title %}
-
-{% block css %}
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-.card {
-  position: relative;
-  width: 250px;
-  height: 400px;
-  margin: 50px auto 0;
-  background: #fff;
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
-  transition: 1s;
-}
-
-.card:hover {
-  transform: translateX(50%);
-}
-.card-image {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   z-index: 1;
-   transform-origin: left;
-  transform-style: preserve-3d;
-  background: #000;
-  box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
-  transition: 1s;
-}
-
-.card:hover .card-image {
-  transform: rotateY(-180deg);
-}
-
-.one {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-}
-
-.one:nth-child(2) {
-  transform: rotateY(180deg);
-  filter: grayscale(100%);
-}
-.card-details {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.card-details-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-h2 {
-  text-align: center;
-}
-
-span {
-  color: #e21212;
-  font-size: 0.5em;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-}
-
-.social-media {
-  margin-top: 10px;
-}
-
-.two {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  text-align: center;
-  line-height: 35px; /* this  centers  icons  vertically */
-  margin: 5px;
-  transition: all 0.2s;
-}
-
-.two:hover {
-  background: #e21212;
-}
-</style>
-{% endblock css %}
-  
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}Team | SAIL{% endblock title %} {% block content %}
 <br><br>
 <br><br>
-<div class="container" >
-  <button style="float: right;"><a href="{% url 'team:PastExecutives'%}" style="color:inherit">Past executives</a></button>
-  <div class="row row-cols-1 row-cols-md-2">
-    {% for team_member in team %}
-    <div class="col mb-4">
-      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-      <div class="card">
-        <div class="card-image">
-          <img class="one" src="https://drive.google.com/uc?export=view&id={{team_member.pic_id}}" alt="{{team_member.name}}">
-          <img class="one" class="one" src="https://drive.google.com/uc?export=view&id={{team_member.pic_id}}" alt="{{team_member.name}}">
+<div class="container">
+    <button style="float: right;"><a href="{% url 'team:PastExecutives'%}" style="color:inherit">Past executives</a></button>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for team_member in team %}
+        <div class="col">
+            <div class="card">
+                <img src="https://drive.google.com/uc?export=view&id={{team_member.pic_id}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{team_member.name}}</h5>
+                    <p class="card-text">{{team_member.position}}</p>
+                    <a href="{{team_member.linkeden}}" class="btn btn-primary">Linkedin</a>
+                    <a href="{{team_member.email}}" class="btn btn-primary">Email</a>
+                </div>
+            </div>
         </div>
-        <div class="card-details">
-          <div class="card-details-content">
-            <h2>
-              {{team_member.name}}
-              <br>
-              <span>{{team_member.position}}</span>
-            </h2>
-            <div class="social-media">
-            <a class="two" href={{team_member.facebook}}><i class="fa fa-facebook-f"></i></a>
-            <a class="two"href={{team_member.linkeden}}><i class="fa fa-linkedin"></i></a>
-            <a class="two" href={{team_member.email}}><span class="fa fa-lg fa-mail"></span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
-            </svg></i></a>
-          </div>
+        {% endfor %}
+
+
+
+    </div>
+    <!-- <div class="row">
+        {% for team_member in team %}
+        <div class="card" style="width: 18rem;">
+            <img src="https://drive.google.com/uc?export=view&id={{team_member.pic_id}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{team_member.name}}</h5>
+                <p class="card-text">{{team_member.position}}</p>
+                <a href="{{team_member.linkeden}}" class="btn btn-primary">Linkedin</a>
+                <a href="{{team_member.email}}" class="btn btn-primary">Email</a>
+            </div>
         </div>
-      </div>
-    </div>
-    </div>
-    {% endfor %}
-  </div>  
-</div>  
+        {% endfor %}
+    </div> -->
+</div>
 {% endblock content %}

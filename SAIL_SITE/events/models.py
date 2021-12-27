@@ -3,7 +3,7 @@ from PIL import Image
 from django.db.models.deletion import CASCADE
 from django.urls import reverse
 from django.core.validators import FileExtensionValidator
-
+from ckeditor.fields import RichTextField
 
 
 # Create your models here.
@@ -24,7 +24,7 @@ class Event(models.Model):
     
     title = models.CharField(max_length=100, blank=True, default='')
     link = models.URLField(blank=True, null=True,max_length=200)
-    content = models.TextField(default='')
+    content = RichTextField(blank=True, null=True)
 
 
     def __str__(self):
