@@ -4,6 +4,6 @@ from . import views
 
 app_name='home'
 urlpatterns = [
-    path('', views.home, name = 'home'),
+    path('', views.PicListView.as_view(), name = 'home'),
 
 ]

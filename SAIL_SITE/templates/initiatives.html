@@ -3,127 +3,62 @@
 
 {%block title%}SAIL | INITIATIVES{% endblock title%}
 {% block css %}
-<link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
-        <link rel="stylesheet" href="{%static 'css/fontawesome-all.min.css'%}">
-        <link rel="stylesheet" href="{%static 'css/lightbox.min.css'%}">
-        <link rel="stylesheet" href="{%static 'css/owl.carousel.min.css'%}">
-        <link rel="stylesheet" href="{%static 'css/animate.css'%}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{%static 'css/responsive.css'%}">
-<style>
-        .dropdown {
-        float: left;
-        font-size: 16px;  
-        outline: none;
-        color: white;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-        padding: 5px 15px;
-        }
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 5;
-        } 
-        .dropdown-content a {
-              float: none;
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-              text-align: left;
-            }
 
-        .dropdown-content a:hover {
-              background-color: #3AAFA9;
-            }
-
-        .dropdown:hover .dropdown-content {
-              display: block;
-            }
-
-        .cta-button{
-            text-align: center;
-        }
-
-        .row{
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .section-padding{
-            background-color: aquamarine;
-            opacity: 80%;
-            border-radius: 2rem;
-            margin: 2rem 10vw 2rem 10vw;
-            transition: transform .2s;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            
-        }
-        .section-padding:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-        </style>
     {% endblock css %}
-    
-    <body>
+
     {% block content %}
     <br>
     <br>
-    <br>
     
+    <div class="container">
+        <br>
+				
+				<!-- //Section Title -->
+				<div class="row">
+					<div class="col-lg-10 ">
+						<div class="about-content text-muted">
+							<div class="page-title"><h1>Initiatives</h1>
+							</div>
+							<br>
+		
+							<p>We are organizing many events to achieve a student alumni community, to help them benefit from each other.</p>
+						</div>
+					</div>
+				</div>
+				<br>
+
     {% for x in pics %}
-     <section  class="section-padding about-area bg-light" style="padding-top: 20px; padding-bottom: 20px;">
-            <div class="container">
-                <!-- Section Title -->
-                <!-- //Section Title -->
-                
-                  <div class="row flex-column-reverse flex-md-row">
-                      
-                          <div class="col-lg-5 col-xs-12">
-                              <div class="about-bg" style="background-image:url({{x.image.url}});background-size:100% 100%;">
-                              </div>
-                          </div>
-                          <div class="col-lg-7 col-xs-12">
-                              <div class="about-content">
-                                  <div class="row justify-content-center">
-                                      <div class="col-lg-6 col-xs-12">
-                                          <div class="section-title text-center">
-                                              <h2>{{x.title}}</h2>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  {{x.desc|safe}}
-                                  <br>
-                                  
-                                  <div class="row justify-content-center">
-                                    <div class="col-lg-7 col-xs-12 align-items-center" style="display: flex; align-items: center; justify-content: center;" >
-                                        <div class="cta-button">
-                                            <div class="d-table">
-                                                <div class="d-table-cell">
-                                                    <a target="_blank" href="{{x.url}}" align="center" class="button">
-                                                        {{x.urlTitle}} 
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-      
-                  </div>
-                
-            </div>
-        </section>
+     <div class="row">
+					<div class="col-lg-10 col-sm-10 col-xs-10">
+						<div class="row">
+							<img src="{{x.image.url}}" alt="">
+						</div>
+						<div class="row" style="background-color: #1E2532;">
+							<div class="col">
+								<div class="row text-white small font-weight-light m-1 p-1" >
+								{{x.title}}
+								</div>
+								<div class="row text-white font-weight-bolder m-1 p-1">
+									{{x.desc|safe}}
+								</div>
+								<div style="display: flex; justify-content: end;">
+                                  <a href="{{x.url}}" class="col-1">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+  <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"/>
+</svg>
+								</a>  
+                                </div>
+                                
+                                
+                                <br>
+							</div>
+						</div>
+					</div>
+				</div>
+                <br><br>
     
     {% endfor %}
-</body>
+    </div>
 {% endblock content%}
 
 
