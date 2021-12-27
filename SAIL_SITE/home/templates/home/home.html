@@ -5,109 +5,156 @@
 {% block css %}
   <style>
     .navbar{
-	position:fixed;
-  background-color: transparent;
-	top: 0;
-	z-index: 99999;
+		position:fixed;
+	background-color: transparent;
+		top: 0;
+		z-index: 99999;
 
-}
+	}
 
-/*slider*/
-#carouselExampleIndicators{
-	position: relative;
-	height: 100vh;
-	width: 100%;
-}
-#carouselExampleIndicators .carousel-inner{
-	position: relative;
-	height: 100%;
-	width: 100%;
-	background: #000;
-}
-#carouselExampleIndicators .carousel-inner:before{
-	position: absolute;
-	content: '';
-	background: rgba(0, 0, 0, 0.45);
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-}
-#carouselExampleIndicators .carousel-inner .carousel-item{
-	position: relative;
-	height: 100vh;
-	width:100%;
-	background: url('https://static.theprint.in/wp-content/uploads/2020/03/IITG.jpg');
-	background-size: 100% 100%;
-	background-position: center;
-	background-attachment: fixed;
-}
-#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(2){
-	background: url('https://analyticsindiamag.com/wp-content/uploads/2019/03/iit-guwahati.jpg');
-	background-size: 100% 100%;
-	background-position: center;
-	background-attachment: fixed;
-}
-#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(3){
-	background: url('https://www.iitg.ac.in/ncc2016/url.jpg');
-	background-size: 100% 100%;
-	background-position: center;
-	background-attachment: fixed;
-}
+	/*slider*/
+	#carouselExampleIndicators{
+		position: relative;
+		height: 100vh;
+		width: 100%;
+	}
+	#carouselExampleIndicators .carousel-inner{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		background: #000;
+	}
+	#carouselExampleIndicators .carousel-inner:before{
+		position: absolute;
+		content: '';
+		background: rgba(0, 0, 0, 0.45);
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+	}
+	#carouselExampleIndicators .carousel-inner .carousel-item{
+		position: relative;
+		height: 100vh;
+		width:100%;
+		background: url('https://static.theprint.in/wp-content/uploads/2020/03/IITG.jpg');
+		background-size: 100% 100%;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(2){
+		background: url('https://analyticsindiamag.com/wp-content/uploads/2019/03/iit-guwahati.jpg');
+		background-size: 100% 100%;
+		background-position: center;
+		background-attachment: fixed;
+	}
+	#carouselExampleIndicators .carousel-inner .carousel-item:nth-child(3){
+		background: url('https://www.iitg.ac.in/ncc2016/url.jpg');
+		background-size: 100% 100%;
+		background-position: center;
+		background-attachment: fixed;
+	}
 
-#carouselExampleIndicators .carousel-inner .carousel-item .carousel-caption{
-	position: absolute;
-	top: 50%;
-	transform: translate(-15%, -30%);
-	height: auto;
-	width: 100%;
-	z-index: 1;
-	text-align: center;
-}
-#carouselExampleIndicators .carousel-inner .carousel-item h1{
-	height: auto;
-	color: #fff;
-	width: 100%;
-	z-index: 1;
-	text-align: center;
-	font-size: 5.5em;
-	font-weight: 750;
-}
-#carouselExampleIndicators .carousel-inner .carousel-item p{
-	color: #ccc;
-	width: 100%;
-	z-index: 1;
-	text-align: center;
-	font-weight: 500;
-	height: 5rem;
-}
+	#carouselExampleIndicators .carousel-inner .carousel-item .carousel-caption{
+		position: absolute;
+		top: 50%;
+		transform: translate(-15%, -30%);
+		height: auto;
+		width: 100%;
+		z-index: 1;
+		text-align: center;
+	}
+	#carouselExampleIndicators .carousel-inner .carousel-item h1{
+		height: auto;
+		color: #fff;
+		width: 100%;
+		z-index: 1;
+		text-align: center;
+		font-size: 5.5em;
+		font-weight: 750;
+	}
+	#carouselExampleIndicators .carousel-inner .carousel-item p{
+		color: #ccc;
+		width: 100%;
+		z-index: 1;
+		text-align: center;
+		font-weight: 500;
+		height: 5rem;
+	}
 
-#typing1, #typing2, #typing3{
-    letter-spacing: -1px; 
-    line-height: 1; 
-    text-align: center;
-}
+	#typing1, #typing2, #typing3{
+		letter-spacing: -1px; 
+		line-height: 1; 
+		text-align: center;
+	}
 
-#typing1::after, #typing2::after, #typing3::after{
-    letter-spacing: -1px; 
-    line-height: 1; 
-    text-align: center;
-}
+	#typing1::after, #typing2::after, #typing3::after{
+		letter-spacing: -1px; 
+		line-height: 1; 
+		text-align: center;
+	}
 
-.carousel-caption h1{
-  font-family: 'Helvetica Neue', sans-serif; 
-  font-size: 3.8rem;
-	font-weight: 700;
-	letter-spacing: .3rem;
-	text-shadow: .1rem .1rem .8rem black;
-	padding-bottom: 1rem;
-}
-.carousel-caption p{
-	font-size: 2rem;
-	text-shadow: .1rem .1rem .5rem black;
+	.carousel-caption h1{
+	font-family: 'Helvetica Neue', sans-serif; 
+	font-size: 3.8rem;
+		font-weight: 700;
+		letter-spacing: .3rem;
+		text-shadow: .1rem .1rem .8rem black;
+		padding-bottom: 1rem;
+	}
+	.carousel-caption p{
+		font-size: 2rem;
+		text-shadow: .1rem .1rem .5rem black;
 
-}
+	}
+
+/* ------------------------- */
+
+	.section-title h2 {
+		margin-top: 5rem;
+		text-transform: uppercase;
+		position: relative;
+		font-size: 32px;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+		line-height: 1;
+		font-weight: bold;
+		color: #17252a;
+	}
+	.section-title h2:before {
+		left: auto;
+		right: 50%;
+		background-color: #3aafa9;
+	}
+
+	.section-title h2:before, .section-title h2:after {
+		position: absolute;
+		content: '';
+		left: 50%;
+		bottom: 0;
+		width: 50px;
+		height: 5px;
+		background-color: #17252a;
+	}
+
+	span{
+		color: #3aafa9;
+		font-weight: 600;
+		line-height: 1.7;
+	}
+
+	.my-nav{
+		z-index: 0;
+		background-color: #17252a;
+	}
+
+	.stats-div{
+		padding: 0 20px;
+		background-color: rgb(255, 255, 255);
+		box-shadow: 5px 5px 5px rgb(201, 201, 201);
+	}
+
 
 </style>
 {% endblock css %}
@@ -118,7 +165,7 @@
 	
 
 			<!-- slider banner	 -->
-
+		<div>
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
 			  <ol class="carousel-indicators">
 			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -155,6 +202,91 @@
 			  </a>
 			</div>
 		</div>
+
+		<section id="about" class="section-padding about-area">
+			
+			<div class="container">
+				<br>
+				<br>
+				<br>
+				<!-- //Section Title -->
+				<div class="row">
+					<div class="col-lg-6 ">
+						<div class="about-content text-muted">
+							<div class="page-title">Student Alumni Interaction Linkage
+							</div>
+		
+							<p>Student Alumni Interaction Linkage (SAIL) is a voluntary cell of IIT Guwahati under the office of Alumni Affairs and External Relations. It will be operated by the students of IIT Guwahati under the Guidance of Dean, Alumni Affairs and External Relations. SAIL acts as an engaging and a mutually beneficial link between IIT Guwahati and its Alumni community.</p>
+							<br>
+							<p>The organization functions with a vision to develop a dynamic student alumni community with IITGAA committed for establishing connections and strengthening ties between students and alumni, facilitating IIT Guwahati's mission of providing top quality education and opportunities and investing in its future.
+							</p>
+							<br>
+							<p>For achieving our well specified and sophisticated vision, a plethora of activities have been undertaken to establish connections and strengthening ties between current students to alumni; and alumni to alumni.</p>
+							<br>
+		
+						</div>
+					</div>
+					<div class="col-lg-6 ">
+						<div class="about-bg" style="background-image:url(https://www.iitg.ac.in/aer/content/alumni/images/sail2.jpg)">
+							
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+		<section class="container" style="margin-bottom: 5%;">
+			<div class="page-title" >Achievements</div>
+
+			<div class="row">
+				<div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
+					<div class="stats-div row align-items-end">
+
+						<h2 class="col-4">81+</h2>
+						<h6 class="col-6">Startups</h6>
+						<a href="" class="col-1">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+						</a>
+					</div>
+				</div>
+				<div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
+					<div class="stats-div row align-items-end">
+
+						<h2 class="col-4">81+</h2>
+						<h6 class="col-6">Startups</h6>
+						<a href="" class="col-1">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+						</a>
+					</div>
+				</div>
+				<div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
+					<div class="stats-div row align-items-end">
+
+						<h2 class="col-4">81+</h2>
+						<h6 class="col-6">Startups</h6>
+						<a href="" class="col-1">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+						</a>
+					</div>
+				</div>
+				<div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
+					<div class="stats-div row align-items-end">
+
+						<h2 class="col-4">81+</h2>
+						<h6 class="col-6">Startups</h6>
+						<a href="" class="col-1">
+							<i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
 	
 
 {% endblock content %}
