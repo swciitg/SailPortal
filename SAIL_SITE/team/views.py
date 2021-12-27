@@ -4,12 +4,8 @@ from .models import Team
 from django.views.generic import ListView
 from django.db.models import Q
 
-def PastExecutives(request):
-    memberlist =  Team.objects.filter(Q(is_alumnus=True), Q(position__name ="General Secretary")).order_by("-year")
-    print(memberlist)
-    return render(request, "team/pastexec.html", {"memberList": memberlist})
-
 def TeamListView(request):
     team =  Team.objects.filter(Q(is_alumnus=False)).order_by("position__rank")
+    pastmemberlist =  Team.objects.filter(Q(is_alumnus=True), Q(position__name ="General Secretary")).order_by("-year")
     print(team)
-    return render(request, "team/team_list.html", {"team": team})
+    return render(request, "team/team_list.html", {"team": team, "pastmemberlist": pastmemberlist})
