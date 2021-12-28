@@ -3,52 +3,106 @@
 {% load static %}
 
 {% block title %}
-  SAIL | {{category.name}}
+  SAIL | {{ events.title }}
 {% endblock title %}
   
 
+
+{% block css %}
+    <style>
+       
+       .blog-thumb{
+            padding: 0 0;
+            border-radius: 0 !important;
+        }
+       
+        
+        .page-title{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 44px;
+            /* identical to box height, or 131% */
+
+
+            letter-spacing: 0.0038em;
+
+            color: #082C4E;
+
+            margin-top: 20px;
+
+        }
+
+        .content{
+
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            /* or 167% */
+
+            letter-spacing: 0.05em;
+
+            /* Good Grey - For less significant text */
+
+            color: #636870;
+
+        }
+
+
+        .blog-auth{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 150% */
+
+            letter-spacing: 0.0075em;
+
+            /* White */
+
+            color: #FFFFFF;
+
+            opacity: .7;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        
+
+        .time{
+          margin: 20px 0;
+        }
+
+        
+    </style>
+{% endblock css %}
+
+
 {% block content %}
 
-
-  
-  {% if not category.events.all %}
-    Empty
-  
-  {% else %}
-    
-    {% for cat in category.events.all %}
-      <strong>
-        {{cat.title}}
-      </strong>
-
-      <iframe src="{{cat.link}}" width="400" height="300" frameborder="0"></iframe>
-      
-
-      {{cat.content}}
-
-    {% endfor %}
-      
-  {% endif %}
-    
-
-   
-   {% for event in categorys.events.all %}
-<!-- 
-   
-   {% if not event.category %}
-     
-   {% endif %}
-      -->
-     
-     <h1>
-       {{event.title}}
-     </h1>
-      <iframe src="{{event.link}}" width="400" height="300" frameborder="0"></iframe>
-     <h1>
-       {{event.content}}
-     </h1>
-   {% endfor %}
-     
+  <section>
+      <div class="row" style="margin-top: 7%;">
+        <div class="col-lg-8 ">
+            <div class="about-blog-content">
+                <div class="page-title">
+                  {{ events.title }}
+                </div>
+                <div class="time">
+                  <strong> Time : </strong> {{ events.date }}
+                </div>
+                <p class="content">
+                  {{ events.content }}  
+                </p>
+            </div>
+        </div>
+        <div class="col-4">
+            <img src="{{events.image.url}}" alt="">
+        </div>
+      </div>
+      <br>
+  </section>
 
     
 {% endblock content %}

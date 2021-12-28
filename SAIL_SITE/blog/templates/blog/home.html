@@ -128,7 +128,7 @@
     <div class="row justify-content-between">
 
     {% for blog in blogs %}
-        <div class="col-5"  style="margin: 50px 0;">
+        <div class="col-md-5 col-sm-12"  style="margin: 50px 0;">
             <div class="row">
                 <img class="blog-thumb" src="{{ blog.thumbnail.url }}" alt="">
             </div>
@@ -146,7 +146,7 @@
 
                 <div class="link">
                     <div class="row justify-content-between">
-                        <div class="col-10">Link to event</div>
+                        <div class="col-10">Link to blog</div>
                         <div class="col-1" style="margin-right: 10px !important" >
                             <a href="{% url 'blog:blog_detail' blog.id %}">
 
@@ -164,55 +164,5 @@
     </div>
 </section>
     
-     <!--  
-    <section id="about" class="section-padding about-area">
-			
-			<div class="container">
-				<br>
-				<br>
-				<br>
-
-				<div class="row">
-					<div class="col-lg-10 ">
-						<div class="about-content text-muted">
-							<div class="page-title">Blogs
-							</div>
-							<br>
-		
-							<p>About Blogs ..... Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
-						</div>
-					</div>
-				</div>
-				<br>
-				<div class="row">
-                    {% for blog in blogs %}
-					<div class="col-lg-5 col-sm-5 col-xs-5">
-
-
-                            <img class="blog-thumb" src="{{ blog.thumbnail.url }}" alt="">
-
-
-								<div class="row  small" >
-								{{ blog.date_posted|date:"F d, Y" }} | {{ blog.author }}
-								</div>
-								<div class="row ">
-									{{ blog.title }}
-								</div>
-								<div style="display: flex; justify-content: space-between;">
-                                    <div>Link to Blog</div>
-									<a href="{% url 'blog:blog_detail' blog.id %}" class="col-1">
-									    <i class="fas fa-arrow-alt-square-right"></i>
-								    </a>
-								</div>
-							</div>
-
-					</div>
-                    <br>
-                    <br>
-                    {% endfor %}
-				</div>
-			<br>
-			<br>
-		</section>     -->             
-
+     
 {% endblock content %}

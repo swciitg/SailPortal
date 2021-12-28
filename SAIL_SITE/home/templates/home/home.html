@@ -1,14 +1,32 @@
-{% extends 'base.html' %} {% load static %} {% block title %}SAIL{% endblock title %} {% block css %} {% endblock css %} {% block content %}
+{% extends 'base.html' %} {% load static %} {% block title %}SAIL{% endblock title %} 
+
+{% block css %} 
+    <style>
+        .page-title{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 44px;
+            /* identical to box height, or 131% */
+
+            letter-spacing: 0.0038em;
+
+            /* Dark Blue - For text and dark bg */
+
+            color: #1E2532;
+        }
+    </style>
+{% endblock css %} 
 
 
-
+{% block carousel %}
 
 <!-- slider banner	 -->
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding:0 0 !important; ">
     <div class="carousel-inner">
 
         {% for i in pic_list %} {% if i.id == 1 %}
-        <div class="carousel-item active" data-bs-interval="10000">
+        <div class="carousel-item active" data-bs-interval="5000">
             <img src="{{i.img.url}}" class="d-block w-100" alt="...">
         </div>{% endif %} {% endfor %} {% for i in pic_list %} {% if i.id != 1 %}
         <div class="carousel-item" data-bs-interval="2000">
@@ -28,6 +46,14 @@
 	</button>
 </div>
 
+{% endblock carousel %}
+    
+
+{% block content %}
+
+
+
+
 <section id="about" class="section-padding about-area">
 
     <div class="container">
@@ -35,10 +61,10 @@
         <br>
         <br>
         <!-- //Section Title -->
-        <div class="row">
-            <div class="col-lg-6 ">
+        <div class="row justify-content-between">
+            <div class="col-lg-7 ">
                 <div class="about-content text-muted">
-                    <h1>Student Alumni Interaction Linkage</h1>
+                    <h1 class="page-title">Student Alumni Interaction Linkage</h1>
 
 
                     <p>Student Alumni Interaction Linkage (SAIL) is a voluntary cell of IIT Guwahati under the office of Alumni Affairs and External Relations. It will be operated by the students of IIT Guwahati under the Guidance of Dean, Alumni Affairs
@@ -53,10 +79,10 @@
 
                 </div>
             </div>
-            <div class="col-lg-6 ">
-                <div class="about-bg" style="background-image:url(https://www.iitg.ac.in/aer/content/alumni/images/sail2.jpg)">
-
-                </div>
+            <div class="col-lg-5 ">
+                <!-- <div class="about-bg" style="background-image:url(https://www.iitg.ac.in/aer/content/alumni/images/sail2.jpg)">
+                </div> -->
+                <img src="https://www.iitg.ac.in/aer/content/alumni/images/sail2.jpg" alt="">
             </div>
 
         </div>

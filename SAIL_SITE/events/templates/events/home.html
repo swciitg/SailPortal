@@ -10,171 +10,99 @@
 
 {% block css %}
     <style>
+       a{
+           color: white;
+       }
+       .blog-thumb{
+            padding: 0 0;
+            border-radius: 0 !important;
+        }
        
         
-        .section-title{
-            background-color: aquamarine;
-            opacity: 80%;
-            border-radius: 2rem;
-            padding: 2rem 2rem 2rem 2rem;
-            transition: transform .2s;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            
-        }
-        .section-title:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-
-        .single-why-me{
-            background-color: rgb(141, 248, 243);
-            border-radius: 1.5rem;
-            opacity: 80%;
-            transition: transform .2s;
-        }
-        .single-why-me:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-        .section{
-            padding-left: 2rem;
-            padding-right: 2rem;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            border-radius: 3rem;
-        }
-
-        .event-bg{
-            transition: transform .2s;
-            width: 30rem;
-            height: auto;
-            border-radius: 3rem;
-            padding-left: -2rem;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-        }
-        .event-bg:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-
-        .section-div{
-            transition: transform .2s;
-            background-color: azure;
-            border-radius: 3rem;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            align-items: center;
-        }
-        .section-div:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-        
-
-        .event-content{
-            transition: transform .2s;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            padding-right: 2rem;
-            padding-left: 5%;
-            align-content: center;
-        }
-        .event-content:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
+        .page-title{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 44px;
+            /* identical to box height, or 131% */
 
 
-        .yt-link{
-            border-radius: 3rem;
-            padding-left: 2rem;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
+            letter-spacing: 0.0038em;
+
+            color: #082C4E;
+
         }
 
-        body > *::-webkit-scrollbar{
-            display: none;
-        }
+        .content{
 
 
-        .section{
-            margin-left: 2rem;
-            margin-right: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            /* or 167% */
+
+            letter-spacing: 0.05em;
+
+            /* Good Grey - For less significant text */
+
+            color: #636870;
+
         }
-        
+
+        .blog-title-bg{
+            background-color: #1F2531;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height, or 125% */
+
+            letter-spacing: 0.0322em;
+
+            color: #FFFFFF;
+        }
+
+        .blog-auth{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 150% */
+
+            letter-spacing: 0.0075em;
+
+            /* White */
+
+            color: #FFFFFF;
+
+            opacity: .7;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
         .blog-title{
-            transition: transform .2s;
-            margin-top: 2rem;
-            
-        }
-        .blog-title:hover{
-            transform: scale(1.05,1.05);
-			
-			
-        }
-        
-        .blog-thumb{
-            /* width: 30rem; */
-            width: 100%;
-            height: auto;
-            border-radius: 1rem;
-        
-            box-shadow: .5rem .5rem rgb(197, 197, 197);
-            
-        
-            margin-bottom: 2rem;
-            transition: transform .2s;
-            
-            margin-bottom: 2rem;
-        }
-        .blog-thumb:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-        
-        .single-blog{
-            border: .05rem solid black ;
-            border-radius: 2rem;
-            margin-top: 2rem;
-        
-            padding: 2rem;
-            transition: transform .2s;
-            background-color: azure;
-            margin-bottom: 2rem;
-            align-items: center;
-            opacity: 80%;
-        }
-        .single-blog:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-        
-        
-        .button{
-            border: .05rem solid black;
-            border-radius: .5rem;
-            padding-left: .75rem;
-            padding-right: .75rem;
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-        
-            box-shadow: .25rem .25rem rgb(197, 197, 197);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height, or 125% */
 
-            transition: transform .2s;
-            background-color: rgb(188, 255, 255);
-            
-            align-items: center;
+            letter-spacing: 0.0322em;
+
+            /* White */
+
+            color: #FFFFFF;
+            opacity: 1;
+
+           
         }
-        .button:hover{
-            background-color: rgb(97, 255, 255);
-            box-shadow: .15rem .15rem rgb(197, 197, 197);
-            transform: scale(1.25,1.25);
+
+        .blog-title-bg{
+            padding: 20px;
         }
+
         
     </style>
 {% endblock css %}
@@ -182,46 +110,62 @@
 {% block content %}
 
     
+<section>
 
-<section id="events" class="section-padding why-choose-us pb-70" style="padding-top: 70px;">
-    
-        <!-- Section Title -->
-        <div class="row justify-content-center">
-            <div class="col-lg-6 ">
-                <div class="section-title text-center">
-                    <h2>Events</h2>
-                    <p>We are organizing many events to achieve a student alumni community, to help them benefit from each other.</p>
+    <div class="row" style="margin-top: 7%;">
+        <div class="col-lg-10 ">
+            <div class="about-blog-content">
+                <div class="page-title">
+                    Events
                 </div>
+                <br>
+                <p class="content">We are organizing many events to achieve a student alumni community, to help them benefit from each other.</p>
             </div>
         </div>
-        
-        <!-- //Section Title -->
-      
+    </div>
+    <br>
 
 
-        <div class="row justify-content-between">
-            {% for category in categorys %} 
 
-                <div class="col">
-                    <div>
-                        <img src="{{category.image}}" alt="not found">
-                        {{category.image}}
+    <div class="row justify-content-between">
+
+        {% for event in events %} 
+            <div class="col-md-5 col-sm-12"  style="margin: 50px 0;">
+                <div class="row">
+                    <img class="blog-thumb" src="{{ event.image.url }}" alt="">
+                </div>
+                <div class="row blog-title-bg">
+                    <div class="blog-title">
+                        {{ event.title }}
                     </div>
-                    <div class="title">
-                        {{ category.name }}
-                    </div>
-                    <div class="link-event" style="border-top: solid 1px white;">
-                        Link to event 
 
-                        <i class="fas fa-arrow-square-right" style="display: flex;justify-content: end;"></i>
+                    <div class="blog-auth">
+                        {{ event.date|date:"F d, Y" }}
+                    </div>
+                    
+                    <div class="line" style="border-top: solid 1px white;"></div>
+                    <br>
+
+                    <div class="link">
+                        <div class="row justify-content-between">
+                            <div class="col-10">Link to event</div>
+                            <div class="col-1" style="margin-right: 10px !important" >
+                                <a href="{% url 'events:events_detail' event.id %}">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                                        <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"/>
+                                    </svg>
+                                </a>
+                            </div>    
+                        </div>
                     </div>
                 </div>
+            </div>
+        {% endfor %}
 
-            {% endfor %}
-        </div>
-    
+    </div>
 </section>
-
+  
     
 {% endblock content %}
     

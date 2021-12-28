@@ -9,24 +9,28 @@ from django.views.generic import ListView,DetailView
 
 def event(request):
     context = {
-        
-        'categorys': Category.objects.all()
+        'events': Event.objects.all()
     }
     
     return render(request, 'events/home.html', context=context)
 
 
 class EventListView(ListView):
-    model = Category
+    model = Event
     template_name = 'events/home.html'  # <app>/<model>_<viewtype>.html
-    context_object_name = 'categorys'
-    ordering = ['name']
+    context_object_name = 'events'
+    ordering = ['title']
   
 
-def EventDetailView(request,evnts):
-    category_evnts = Event.objects.filter(category=evnts)
-    return render(request,'events/events_detail_str.html',{'evnts':evnts,'category_evnts':category_evnts})
-   
+""" def EventDetailView(request,evnts):
+    event_evnts = Event.objects.filter(event=evnts)
+    return render(request,'events/events_detail_str.html',{'evnts':evnts,'event_evnts':event_evnts}) """
+
+class EventDetailView(DetailView):
+    model = Event
+    context_object_name = 'events'
+    template_name = "events/events_detail.html"
+
 """   
     
 class EventDetailView(DetailView):

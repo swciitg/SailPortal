@@ -52,9 +52,9 @@ INSTALLED_APPS = [
     'team',
     'ckeditor',
     'ckeditor_uploader',
-    'django_cleanup.apps.CleanupConfig',
     'opportunity',
     'taggit',
+    'django_cleanup.apps.CleanupConfig',
 
 ]
 SITE_ID = 1

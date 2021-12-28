@@ -213,7 +213,7 @@ border-radius: 4px;
 
     <div class="row" style=" margin-left: 8%;" id="present_year_team">
     {% for team_member in team %}
-    <div class ="col-sm-6" style="width: 35%;">
+    <div class ="col-sm-12 col-md-5" style="width: 35%;">
     <div class="team_photos">
         <img class="team_photos_image" src="/media/{{team_member.pic}}" alt="{{team_member.name}}">
         <div class="team_member_details">
@@ -250,7 +250,7 @@ border-radius: 4px;
 
     <div class="row" style=" margin-left: 8%; display: none;" id="past_years_team">
     {% for team_member in pastmemberlist %}
-    <div class ="col-sm-6" style="width: 35%;">
+    <div class ="col-sm-12 col-md-5" style="width: 35%;">
     <div class="team_photos">
         <img class="team_photos_image" src="/media/{{team_member.pic}}" alt="{{team_member.name}}">
         <div class="team_member_details">

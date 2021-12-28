@@ -47,7 +47,7 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'initiatives:initiatives' %}">Initiatives</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'categorys:events-home'%}">Events</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'events:events-home'%}">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'blog:blog-home' %}">Blog</a>
@@ -59,6 +59,13 @@
             </div>
         </div>
     </nav>
+
+
+    
+    {% block carousel %}
+        
+    {% endblock carousel %}
+        
 
     <div class="content" style="padding: 0 10vw;">
 
