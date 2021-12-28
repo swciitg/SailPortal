@@ -140,3 +140,5 @@ SAIL_SITE/team/migrations/__pycache__/0003_auto_20211017_1442.cpython-39.pyc
 SAIL_SITE/team/migrations/__pycache__/0004_alter_team_pic.cpython-39.pyc
 SAIL_SITE/team/migrations/__pycache__/0005_team_pic_id.cpython-39.pyc
 SAIL_SITE/team/migrations/__pycache__/0006_position_rank.cpython-39.pyc
+*.pyc
+*.pyc

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
 {% load static %}
+
 
 {% block title %}
     Blog | Home
@@ -9,119 +9,166 @@
 
 {% block css %}
     <style>
+
+        .blog-thumb{
+            padding: 0 0;
+            border-radius: 0 !important;
+        }
        
         
-        .section{
-            margin-left: 2rem;
-            margin-right: 2rem;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-            
+        .page-title{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 44px;
+            /* identical to box height, or 131% */
+
+
+            letter-spacing: 0.0038em;
+
+            color: #082C4E;
+
         }
-        
+
+        .content{
+
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            /* or 167% */
+
+            letter-spacing: 0.05em;
+
+            /* Good Grey - For less significant text */
+
+            color: #636870;
+
+        }
+
+        .blog-title-bg{
+            background-color: #1F2531;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height, or 125% */
+
+            letter-spacing: 0.0322em;
+
+            color: #FFFFFF;
+        }
+
+        .blog-auth{
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 150% */
+
+            letter-spacing: 0.0075em;
+
+            /* White */
+
+            color: #FFFFFF;
+
+            opacity: .7;
+        }
+
         .blog-title{
-            transition: transform .2s;
-            margin-top: 2rem;
-            
-        }
-        .blog-title:hover{
-            transform: scale(1.05,1.05);
-			
-			
-        }
-        
-        .blog-thumb{
-            /* width: 30rem; */
-            width: 100%;
-            height: auto;
-            border-radius: 1rem;
-        
-            box-shadow: .5rem .5rem rgb(197, 197, 197);
-            
-        
-            margin-bottom: 2rem;
-            transition: transform .2s;
-            
-            margin-bottom: 2rem;
-        }
-        .blog-thumb:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-        
-        .single-blog{
-            border: .05rem solid black ;
-            border-radius: 2rem;
-            margin-top: 2rem;
-        
-            padding: 2rem;
-            transition: transform .2s;
-            background-color: azure;
-            margin-bottom: 2rem;
-            align-items: center;
-            opacity: 80%;
-        }
-        .single-blog:hover{
-            transform: scale(1.05,1.05);
-			opacity: 90%;
-        }
-        
-        
-        .button{
-            border: .05rem solid black;
-            border-radius: .5rem;
-            padding-left: .75rem;
-            padding-right: .75rem;
-            padding-top: .5rem;
-            padding-bottom: .5rem;
-        
-            box-shadow: .25rem .25rem rgb(197, 197, 197);
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 30px;
+            /* identical to box height, or 125% */
 
-            transition: transform .2s;
-            background-color: rgb(188, 255, 255);
-            
-            align-items: center;
-        }
-        .button:hover{
-            background-color: rgb(97, 255, 255);
-            box-shadow: .15rem .15rem rgb(197, 197, 197);
-            transform: scale(1.25,1.25);
+            letter-spacing: 0.0322em;
+
+            /* White */
+
+            color: #FFFFFF;
+            opacity: 1;
+
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
 
-        /* @media screen { min-width: none; max-width: 40rem;
-            .blog-thumb{
-                width: 25rem;
-                height: auto;
-                border-radius: 1rem;
-            
-                box-shadow: .5rem .5rem rgb(197, 197, 197);
-                
-            
-                margin-bottom: 2rem;
-                transition: transform .2s;
-                
-                margin-bottom: 2rem;
-            }
-            .blog-thumb:hover{
-                transform: scale(1.05,1.05);
-            }   
-        } */
-        
+        .blog-title-bg{
+            padding: 20px;
+        }
+
+
+       
     </style>
 {% endblock css %}
     
 
 {% block content %}
+
+
+<section>
+
+    <div class="row" style="margin-top: 7%;">
+        <div class="col-lg-10 ">
+            <div class="about-blog-content">
+                <div class="page-title">
+                    Blogs
+                </div>
+                <br>
+                <p class="content">About Blogs ..... Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="row justify-content-between">
+
+    {% for blog in blogs %}
+        <div class="col-5"  style="margin: 50px 0;">
+            <div class="row">
+                <img class="blog-thumb" src="{{ blog.thumbnail.url }}" alt="">
+            </div>
+            <div class="row blog-title-bg">
+                <div class="blog-auth">
+                    {{ blog.date_posted|date:"F d, Y" }} | {{blog.author}}
+                </div>
+                
+                <div class="blog-title">
+                    {{ blog.title }}
+                </div>
+                
+                <div class="line" style="border-top: solid 1px white;"></div>
+                <br>
+
+                <div class="link">
+                    <div class="row justify-content-between">
+                        <div class="col-10">Link to event</div>
+                        <div class="col-1" style="margin-right: 10px !important" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"/>
+                              </svg>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    </div>
+</section>
     
-    
-      
-    <section id="about" class="section-padding about-area" style="margin: 2%">
+     <!--  
+    <section id="about" class="section-padding about-area">
 			
 			<div class="container">
 				<br>
 				<br>
 				<br>
-				<!-- //Section Title -->
+
 				<div class="row">
 					<div class="col-lg-10 ">
 						<div class="about-content text-muted">
@@ -136,25 +183,26 @@
 				<br>
 				<div class="row">
                     {% for blog in blogs %}
-					<div class="col-lg-10 col-sm-10 col-xs-10 mt-4 mb-4">
-						<div class="row">
-							<img src="https://drive.google.com/uc?export=view&id={{ blog.bg_image_id }}" alt="">
-						</div>
-						<div class="row" style="background-color: #1E2532;">
-							<div class="col">
-								<div class="row text-white small font-weight-light m-1 p-1" >
+					<div class="col-lg-5 col-sm-5 col-xs-5">
+
+
+                            <img class="blog-thumb" src="{{ blog.thumbnail.url }}" alt="">
+
+
+								<div class="row  small" >
 								{{ blog.date_posted|date:"F d, Y" }} | {{ blog.author }}
 								</div>
-								<div class="row text-white font-weight-bolder m-1 p-1">
+								<div class="row ">
 									{{ blog.title }}
 								</div>
-								<div style="display: flex; justify-content: end;">
+								<div style="display: flex; justify-content: space-between;">
+                                    <div>Link to Blog</div>
 									<a href="{% url 'blog:blog_detail' blog.id %}" class="col-1">
-									<i class="fas fa-arrow-circle-right" aria-hidden="true"></i>
-								</a>
+									    <i class="fas fa-arrow-alt-square-right"></i>
+								    </a>
 								</div>
 							</div>
-						</div>
+
 					</div>
                     <br>
                     <br>
@@ -162,6 +210,6 @@
 				</div>
 			<br>
 			<br>
-		</section>                 
+		</section>     -->             
 
 {% endblock content %}

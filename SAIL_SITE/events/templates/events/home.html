@@ -97,6 +97,84 @@
         body > *::-webkit-scrollbar{
             display: none;
         }
+
+
+        .section{
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+        
+        .blog-title{
+            transition: transform .2s;
+            margin-top: 2rem;
+            
+        }
+        .blog-title:hover{
+            transform: scale(1.05,1.05);
+			
+			
+        }
+        
+        .blog-thumb{
+            /* width: 30rem; */
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+        
+            box-shadow: .5rem .5rem rgb(197, 197, 197);
+            
+        
+            margin-bottom: 2rem;
+            transition: transform .2s;
+            
+            margin-bottom: 2rem;
+        }
+        .blog-thumb:hover{
+            transform: scale(1.05,1.05);
+			opacity: 90%;
+        }
+        
+        .single-blog{
+            border: .05rem solid black ;
+            border-radius: 2rem;
+            margin-top: 2rem;
+        
+            padding: 2rem;
+            transition: transform .2s;
+            background-color: azure;
+            margin-bottom: 2rem;
+            align-items: center;
+            opacity: 80%;
+        }
+        .single-blog:hover{
+            transform: scale(1.05,1.05);
+			opacity: 90%;
+        }
+        
+        
+        .button{
+            border: .05rem solid black;
+            border-radius: .5rem;
+            padding-left: .75rem;
+            padding-right: .75rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        
+            box-shadow: .25rem .25rem rgb(197, 197, 197);
+
+            transition: transform .2s;
+            background-color: rgb(188, 255, 255);
+            
+            align-items: center;
+        }
+        .button:hover{
+            background-color: rgb(97, 255, 255);
+            box-shadow: .15rem .15rem rgb(197, 197, 197);
+            transform: scale(1.25,1.25);
+        }
         
     </style>
 {% endblock css %}
@@ -116,45 +194,30 @@
                 </div>
             </div>
         </div>
+        
         <!-- //Section Title -->
-        <div class="row justify-content-center"  >
-           
-                {% for category in categorys %}
-                    
+      
 
-                
-                        <div class="col-md-5 align-items-center" style="padding-top: 2rem; padding-bottom: 2rem; ">
-                            <div class="single-why-me">
-                                <br>
-                                
-                                <br>
-                                    <div class="row justify-content-between" style="display: flex;justify-content: center;align-items: center;">
 
-                                        <div class="col-6">
-                                            <a target="_blank" href="{% url 'categorys:events_detail_str' category.id %}">
-                                                <!-- Works for id only not for str -->
-                                            <!-- <a target="_blank" href="{% url 'categorys:events_detail_str' category.name %}"> -->
-                                                
-                                                <img class="article-img " src="{{category.icon.url}}" width="100px" height="100px" alt='No image'>
-                                                
-                                            </a>
-                                        </div>
-                                        <div class="col-6"> 
-                                            <h4>{{ category.name }}</h4>
-                                        </div>
-                                    </div>
-                                        
-                                <br>
-                                
-                                <br>
-                            </div>
-                        </div>
-                
+        <div class="row justify-content-between">
+            {% for category in categorys %} 
 
-                   
-                {% endfor %}
-            
+                <div class="col">
+                    <div>
+                        <img src="{{category.image}}" alt="not found">
+                        {{category.image}}
+                    </div>
+                    <div class="title">
+                        {{ category.name }}
+                    </div>
+                    <div class="link-event" style="border-top: solid 1px white;">
+                        Link to event 
 
+                        <i class="fas fa-arrow-square-right" style="display: flex;justify-content: end;"></i>
+                    </div>
+                </div>
+
+            {% endfor %}
         </div>
     
 </section>

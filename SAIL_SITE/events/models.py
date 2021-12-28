@@ -9,7 +9,8 @@ from ckeditor.fields import RichTextField
 # Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=30, default='')
-    icon = models.ImageField(default='default.jpg',upload_to='events/')
+    image = models.ImageField(default='default.jpg',upload_to='events/',height_field=None, width_field=None, max_length=None, null=True, blank="True")
+
         
     
     def __str__(self):
