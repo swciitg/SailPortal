@@ -18,72 +18,81 @@
 </head>
 
 <body>
-    <h3 style="text-align: center;"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
-    <div class="row">
-        <div class="col" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
-            <h5>STUDENTS' AFFAIRS BOARD </h5>
-        </div>
-        <div class="col" style="background-color: #2C3A47; color: white ; padding-top: 1%; padding-bottom: 1%;">
-            <div class="btn-group dropup">
-                <button type="button" class="btn dropdown-toggle" style="color: white;" data-bs-toggle="dropdown" aria-expanded="false">
-                  Student Alumni Interaction Linkage
-                </button>
-                <ul class="dropdown-menu">
-                    <li>
-                        <a style="color: #2C3A47; background-color: white;" href="">
-                            <h2>New Link</h2>
-                        </a>
-                    </li>
-                    <li>
-                        <a style="color: #2C3A47; background-color: white;" href="">
-                            <h2>New Link</h2>
-                        </a>
-                    </li>
-                    <li>
-                        <a style="color: #2C3A47; background-color: white;" href="">
-                            <h2>New Link</h2>
-                        </a>
-                    </li>
-                    <li>
-                        <a style="color: #2C3A47; background-color: white;" href="">
-                            <h2>New Link</h2>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col"></div>
-    </div><br> {% block carousel %} {% endblock carousel %}
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'services:services' %}">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'initiatives:initiatives' %}">Initiatives</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'events:events-home'%}">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'blog:blog-home' %}">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'team:SailTeam'%}">Team</a>
-                    </li>
-                </ul>
+    <div style="position: -webkit-sticky; position: sticky; top: 0; background-color: white;">
+
+
+    
+        <h3 style="text-align: center;"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
+        <div class="row">
+            <div class="col" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
+                <h5>STUDENTS' AFFAIRS BOARD </h5>
             </div>
-        </div>
-    </nav>
+            <div class="col" style="background-color: #2C3A47; color: white ; padding-top: 1%; padding-bottom: 1%;">
+                <div class="btn-group dropup">
+                    <button type="button" class="btn dropdown-toggle" style="color: white; font-size: 150%;" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Alumni Interaction Linkage
+                    </button>
+                    <ul class="dropdown-menu text-center" style="color: white; background-color: #2C3A47; padding-right: 40%;">
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">HAB</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">Sports Board</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">Technical Board</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">Cultural Board</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div><br> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link {% block one %}{% endblock one %}" aria-current="page" href="{% url 'home:home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block two %}{% endblock two %}" aria-current="page" href="{% url 'services:services' %}">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block three %}{% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}">Initiatives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block four %}{% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block five %}{% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block six %}{% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}">Team</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+    {% block carousel %} {% endblock carousel %}
     <!-- <ul class="nav sticky-top">
         <li class=" nav-item ">
             <a style="color: #2C3A47; background-color: white;" class="nav-link " aria-current="page " href="{% url 'home:home' %} ">Home</a>
@@ -181,14 +190,21 @@
     </div>
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js " integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB " crossorigin="anonymous "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js " integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 " crossorigin="anonymous "></script>
     -->
+    <script>
+
+        (window).scroll(function () {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 500);
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $(window).scroll(function() {
