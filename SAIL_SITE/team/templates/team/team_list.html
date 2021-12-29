@@ -152,12 +152,12 @@
             </div>
         </div>
     </div>
-
-    <select name="year_dropdown" id="year_dropdown" class="drop-down-design">
-        <option value="1" class="option-design">Present Year</option>
-        <option value="2" class="option-design">Past Years</option>
-    </select>
-
+    <div class="row">
+        <select name="year_dropdown" id="year_dropdown" class="drop-down-design">
+            <option value="1" class="option-design">Present Year</option>
+            <option value="2" class="option-design">Past Years</option>
+        </select>
+    </div>
     <div class="row" id="present_year_team">
         {% for team_member in team %}
             <div class="col-lg-4" id="present_mems">
@@ -177,12 +177,12 @@
                     <br>
 
                     <div class="col-10 mem_position" style="text-align: left;">
-                        <a href="mailto:{{team_member.email}}" style="overflow-wrap: normal; overflow: visible; color: #FFFFFF;">
+                        <a href="mailto:{{team_member.email}}" style="overflow-wrap: normal; overflow: visible; color: #FFFFFF; text-decoration: none;">
                             {{team_member.email}}
                         </a>
                     </div>
                     <div class="col-2 mem_position" style="text-align: right;">
-                        <a href="{{team_member.linkeden}}"><i class="fa fa-linkedin-square fa-2x" style="color: #FFFFFF;"></i></a>
+                        <a href="mailto:{{team_member.email}}" style="overflow-wrap: normal; overflow: visible; color: #FFFFFF; text-decoration: none;">
                     </div>
                 </div>                
             </div>
@@ -223,15 +223,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $('#year_dropdown').change(function(){
-        console.log('hello');
+
         let year_type = $('#year_dropdown').val();
         let present = document.getElementById('present_year_team');
         let past = document.getElementById('past_years_team');
 
-        console.log(year_type);
+
         if(year_type == 1)
         {
-            console.log('heyy');
+
             present.style.display = "block";
             past.style.display = "none";
         }

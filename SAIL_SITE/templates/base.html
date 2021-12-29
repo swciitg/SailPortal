@@ -10,6 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
 
     <title>{%block title%}{% endblock title%}</title>
 
@@ -17,6 +19,53 @@
 
 </head>
 
+<style>
+    .footer-heading {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 44px;
+        letter-spacing: 0.0038em;
+    }
+    .footer-items {
+        font-family: Red Hat Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.0075em;
+        color: white;
+    }
+    .footer-items:hover{
+        color: white;
+        text-decoration: underline;
+    }
+    .logo-text {
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+
+        letter-spacing: 0.0322em;
+    }
+    .copyright-text {
+        font-family: Red Hat Display;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        /* or 150% */
+
+        letter-spacing: 0.0075em;
+
+        /* Light Grey */
+
+        color: #9FABB7;
+    }
+</style>
 <body>
 
     <div style="position: -webkit-sticky; position: sticky; top: 0; background-color: white;">
@@ -126,64 +175,76 @@
 
     </div>
 
-
-    <div style="background-color: rgb(56, 47, 47); color: white; ">
-        <div class="container ">
-            <footer class="py-5 ">
-                <div class="row ">
-                    <div class="col-2 ">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column ">
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Home</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Features</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Pricing</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">FAQs</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">About</a></li>
+    <div style="background-color: #1E2532; color: white;">
+        <div class="container">
+            <footer class="py-5">
+                <div class="row">
+                    <div class = "col-lg-2 col-sm-4" >
+                        <img src="https://iitg.ac.in/img/iitgfooter.png" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="col-lg-3 col-sm-4" style="padding-top: 5px;">
+                        <h4 class="footer-heading">Contact</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Address: Guwahati - 781039</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Phone: +91 361 258 4000</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Email: peeroff@iitg.ac.in</a></li>
+                            <li class="nav-item mb-2 p-0">
+                                <ul style="padding: 0px;">
+                                    <li style="display: inline;"><a href="#" style="text-decoration: none;"><img src="/media/Facebook.png"></a></li>
+                                    <li style="display: inline; padding-left: 5px;"><a href="#" style="text-decoration: none;"><img src="/media/LinkedIn.png"></a></li>
+                                    <li style="display: inline; padding-left: 5px;"><a href="#" style="text-decoration: none;"><img src="/media/Outlook.png"></a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
 
-                    <div class="col-2 ">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column ">
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Home</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Features</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Pricing</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">FAQs</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">About</a></li>
+                    <div class="col-lg-3 col-sm-4" style="padding-top: 5px;">
+                        <h4 class="footer-heading">Useful Links</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">IIT Guwahati</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Alumni & External Relations</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">IITG Alumni Association</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Startups of IITG Alumni</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-2 ">
-                        <h5>Section</h5>
-                        <ul class="nav flex-column ">
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Home</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Features</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">Pricing</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">FAQs</a></li>
-                            <li class="nav-item mb-2 "><a href="# " class="nav-link p-0 text-muted ">About</a></li>
+                    <div class="col-lg-2 col-sm-4" style="padding-top: 5px;">
+                        <h4 class="footer-heading" style="visibility: hidden;">Links</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">HAB</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Administration</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Telephone Directory</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Intranet</a></li>
                         </ul>
                     </div>
 
-                    <div class="col-4 offset-1 ">
-                        <form>
-                            <h5>Subscribe to our newsletter</h5>
-                            <p>Monthly digest of whats new and exciting from us.</p>
-                            <div class="d-flex w-100 gap-2 ">
-                                <label for="newsletter1 " class="visually-hidden ">Email address</label>
-                                <input id="newsletter1 " type="text " class="form-control " placeholder="Email address ">
-                                <button class="btn btn-primary " type="button ">Subscribe</button>
-                            </div>
-                        </form>
+                    <div class="col-lg-2 col-sm-4" style="padding-top: 5px;">
+                        <h4 class="footer-heading" style="visibility: hidden;">Links</h4>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Convocation Speeches and Documents</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Student Gymkhana</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 footer-items">Academic Affairs</a></li>
+                        </ul>
                     </div>
                 </div>
+                <br>
+                <br>
 
-                <div class="d-flex justify-content-between py-4 my-4 border-top ">
-                    <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-                    <ul class="list-unstyled d-flex ">
-                        <li class="ms-3 "><a class="link-dark " href="# "><svg class="bi " width="24 " height="24 "><use xlink:href="#twitter "/></svg></a></li>
-                        <li class="ms-3 "><a class="link-dark " href="# "><svg class="bi " width="24 " height="24 "><use xlink:href="#instagram "/></svg></a></li>
-                        <li class="ms-3 "><a class="link-dark " href="# "><svg class="bi " width="24 " height="24 "><use xlink:href="#facebook "/></svg></a></li>
-                    </ul>
+                <div class="row" style="padding-top: 5px;">
+                    <div class="col-lg-6 col-sm-6 col-xs-12" style="width: fit-content;">
+                        <img src="/media/swc.png">
+                        &nbsp; 
+                        <div class = "logo-text" style="display: inline;">
+                            IITG Hostel Affairs Board
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                        <div class="copyright-text" style="display: inline;">
+                            |
+                            &nbsp; &nbsp;
+                            &copy; 2021 &nbsp; @students-web-commitee
+                        </div>
+                    </div>
                 </div>
             </footer>
         </div>
