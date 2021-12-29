@@ -10,9 +10,7 @@
 {% block css %}
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Red Hat Display' rel='stylesheet'>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
 <style>
     #present_mems{
         margin: 5%; 
@@ -69,32 +67,6 @@
         letter-spacing: 0.62px;
         color: #FFFFFF;
     }
-
-    .drop-down {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 12px 24px;
-
-        position: absolute;
-        width: 201px;
-        height: 43px;
-        left: 1029px;
-        top: 612px;
-
-        /* White */
-
-        background: #FFFFFF;
-        /* Extreme light - for strokes and lines */
-
-        border: 1px solid #D7DDE1;
-        box-sizing: border-box;
-        /* Ultra light shadow - for drop downs */
-
-        box-shadow: 0px 4px 20px rgba(30, 37, 50, 0.04);
-        border-radius: 4px;
-}
 .drop-down-design {
         margin-left: 85%;
         width: 150px;
@@ -153,10 +125,12 @@
         </div>
     </div>
 
+    <div class="row">
     <select name="year_dropdown" id="year_dropdown" class="drop-down-design">
         <option value="1" class="option-design">Present Year</option>
         <option value="2" class="option-design">Past Years</option>
     </select>
+    </div>
 
     <div class="row" id="present_year_team">
         {% for team_member in team %}
@@ -177,7 +151,7 @@
                     <br>
 
                     <div class="col-10 mem_position" style="text-align: left;">
-                        <a href="mailto:{{team_member.email}}" style="overflow-wrap: normal; overflow: visible; color: #FFFFFF;">
+                        <a href="mailto:{{team_member.email}}" style="overflow-wrap: normal; overflow: visible; color: #FFFFFF; text-decoration: none;">
                             {{team_member.email}}
                         </a>
                     </div>
@@ -208,7 +182,7 @@
                     <br>
 
                     <div class="col-10 mem_position" style="text-align: left;">
-                        <a href="mailto:{{team_member.email}}" style="overflow-wrap: normal; overflow: visible; color: #FFFFFF;">
+                        <a href="mailto:{{team_member.email}}" style="overflow-wrap: normal; overflow: visible; color: #FFFFFF; text-decoration: none;">
                             {{team_member.email}}
                         </a>
                     </div>
@@ -223,15 +197,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     $('#year_dropdown').change(function(){
-        console.log('hello');
         let year_type = $('#year_dropdown').val();
         let present = document.getElementById('present_year_team');
         let past = document.getElementById('past_years_team');
 
-        console.log(year_type);
         if(year_type == 1)
         {
-            console.log('heyy');
             present.style.display = "block";
             past.style.display = "none";
         }
