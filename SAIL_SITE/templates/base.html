@@ -75,16 +75,18 @@
 </style>
 
 <body>
-    <h3 style="text-align: center;"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
-    <div class="row">
-        <div class="col" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
-            <h5>STUDENTS' AFFAIRS BOARD </h5>
-        </div>
-        <div class="col" style="background-color: #2C3A47; color: white ; padding-top: 1%; padding-bottom: 1%;">
-            <div class="btn-group dropup">
-                <button type="button" class="btn dropdown-toggle" style="color: white;" data-bs-toggle="dropdown" aria-expanded="false">
+    <div style="top: 0; position: -webkit-sticky; position: sticky; background-color: aliceblue;">
+        <h3 style="text-align: center;"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
+        <div class="row">
+            <div class="col" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
+                <h5>STUDENTS' AFFAIRS BOARD </h5>
+            </div>
+            <div class="col">
+                <div class="btn-group dropup" style="background-color: #2C3A47; color: white ; padding-top: 1%; padding-bottom: 1%;">
+                    <button type="button" class="btn dropdown-toggle" style="color: white; font-size: 150%;" data-bs-toggle="dropdown" aria-expanded="false">
                   Student Alumni Interaction Linkage
                 </button>
+<<<<<<< Updated upstream
                 <ul class="dropdown-menu" style="z-index: 1;">
                     <li>
                         <a style="color: #2C3A47; background-color: white;" href="">
@@ -107,42 +109,81 @@
                         </a>
                     </li>
                 </ul>
+=======
+                    <ul class="dropdown-menu text-center" style="background-color: #2C3A47; padding-right: 40%;">
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">HAB</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">Sports Board</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">Technical Board</h2>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <h2 style="color: white;">Cultural Board</h2>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+>>>>>>> Stashed changes
             </div>
+            <div class="col"></div>
         </div>
+<<<<<<< Updated upstream
         <div class="col"></div>
     </div>
 
     <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
+=======
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+>>>>>>> Stashed changes
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home:home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'services:services' %}">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'initiatives:initiatives' %}">Initiatives</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'events:events-home'%}">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'blog:blog-home' %}">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'team:SailTeam'%}">Team</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mx-5">
+                        <li class="nav-item">
+                            <a class="nav-link {% block one %} {% endblock one %}" aria-current="page" href="{% url 'home:home' %}" style="padding-right: 1em; font-size: 1.3vw;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block two %} {% endblock two %}" aria-current="page" href="{% url 'services:services' %}" style="padding-right: 1em; font-size: 1.3vw;">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block three %} {% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}" style="padding-right: 1em;font-size: 1.3vw;">Initiatives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block four %} {% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}" style="padding-right: 1em;font-size: 1.3vw;">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block five %} {% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}" style="padding-right: 1em;font-size: 1.3vw;">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block six %} {% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}" style="padding-right: 1em;font-size: 1.3vw;">Team</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+<<<<<<< Updated upstream
         </div>
     </nav> -->
     <ul class="nav sticky-top">
+=======
+        </nav>
+    </div>
+    {% block carousel %} {% endblock carousel %}
+    <!-- <ul class="nav sticky-top">
+>>>>>>> Stashed changes
         <li class=" nav-item ">
             <a style="color: #2C3A47; background-color: white;" class="nav-link " aria-current="page " href="{% url 'home:home' %} ">Home</a>
         </li>

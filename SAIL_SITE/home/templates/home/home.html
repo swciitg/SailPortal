@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 {% extends 'base.html' %} {% load static %} {% block title %}SAIL{% endblock title %} 
 
 {% block css %} 
@@ -45,6 +46,22 @@
 
 
 {% block carousel %}
+=======
+{% extends 'base.html' %} {% load static %} {% block title %}SAIL{% endblock title %} {% block one %} active {% endblock one %} {% block css %}
+<style>
+    .page-title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 34px;
+        line-height: 44px;
+        /* identical to box height, or 131% */
+        letter-spacing: 0.0038em;
+        /* Dark Blue - For text and dark bg */
+        color: #1E2532;
+    }
+</style>
+{% endblock css %} {% block carousel %}
+>>>>>>> Stashed changes
 
 <!-- slider banner	 -->
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding:0 0 !important; ">
@@ -71,10 +88,7 @@
 	</button>
 </div>
 
-{% endblock carousel %}
-    
-
-{% block content %}
+{% endblock carousel %} {% block content %}
 
 <section id="about" class="section-padding about-area">
 
