@@ -15,6 +15,31 @@
 
             color: #1E2532;
         }
+        .ach-box{
+            border: solid 1px rgb(123, 124, 123);
+        }
+                
+        .counter {
+        animation-duration: 1s;
+        animation-delay: 0s;
+        }
+
+        @import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+
+        .ach-box{
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 24px;
+            /* or 67% */
+
+            text-align: center;
+            text-transform: capitalize;
+
+            color: #130F26;
+        }
+
+                  
+
     </style>
 {% endblock css %} 
 
@@ -50,9 +75,6 @@
     
 
 {% block content %}
-
-
-
 
 <section id="about" class="section-padding about-area">
 
@@ -91,136 +113,88 @@
 
 
 <section class="container" style="margin-bottom: 5%;">
-    <div class="page-title">Achievements</div>
+    <div class="page-title" style="margin-bottom: 30px;">Achievements</div>
 
-    <div class="row">
-        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
-            <div class="stats-div row align-items-end">
+    <div class="row justify-content-between">
+        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 25px;">
+            <div class="counter ach-box stats-div row align-items-end">
+                
+                <h5 class="counter-number col-4">
+                  <div class="counter-timer" data-from="0" data-to="89">
+                      89
+                    </div>
+                </h5>
+                <h5 class="counter-title">Sites launched</h5>
+              </div>
+            <!-- <div class="">
 
-                <h2 class="col-4">81+</h2>
+                <h2 class="">
+                    <h5 class="counter-number">
+                    <div class="counter-timer" data-from="0" data-to="89">89</div>
+                    </h5>
+                </h2>
                 <h6 class="col-6">Startups</h6>
-                <a href="" class="col-1">
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                
+            </div> -->
+        </div>
+        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 25px;">
+            <div class="ach-box stats-div row align-items-end">
 
-                </a>
+                <h2 class="col-4">
+                    <h5 class="counter-number">
+                    <div class="counter-timer" data-from="0" data-to="89">89</div>
+                    </h5>
+                </h2>
+                <h6 class="col-6">Startups</h6>
+                
             </div>
         </div>
-        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
-            <div class="stats-div row align-items-end">
+        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 25px;">
+            <div class="ach-box stats-div row align-items-end">
 
-                <h2 class="col-4">81+</h2>
+                <h2 class="col-4">
+                    <h5 class="counter-number">
+                    <div class="counter-timer" data-from="0" data-to="89">89</div>
+                    </h5>
+                </h2>
                 <h6 class="col-6">Startups</h6>
-                <a href="" class="col-1">
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-
-                </a>
+                
             </div>
         </div>
-        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
-            <div class="stats-div row align-items-end">
+        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 25px;">
+            <div class="ach-box stats-div row align-items-end">
 
-                <h2 class="col-4">81+</h2>
+                <h2 class="col-4">
+                    <h5 class="counter-number">
+                    <div class="counter-timer" data-from="0" data-to="89">89</div>
+                    </h5>
+                </h2>
                 <h6 class="col-6">Startups</h6>
-                <a href="" class="col-1">
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-
-                </a>
-            </div>
-        </div>
-        <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end">
-            <div class="stats-div row align-items-end">
-
-                <h2 class="col-4">81+</h2>
-                <h6 class="col-6">Startups</h6>
-                <a href="" class="col-1">
-                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
-
-                </a>
+                
             </div>
         </div>
     </div>
 </section>
 
-
 {% endblock content %} {% block js %}
-<script type="text/javascript">
-    // get the element
-    const text1 = document.getElementById('typing1');
-    const text2 = document.getElementById('typing2');
-    const text3 = document.getElementById('typing3');
-
-    // make a words array
-    const words = [
-        "We",
-        "are",
-        "here",
-        "to",
-        "connect"
-    ];
-
-    // start typing effect
-    setTyper(text1, words);
-    setTyper(text2, words);
-    setTyper(text3, words);
-
-    function setTyper(element, words) {
-
-        const LETTER_TYPE_DELAY = 75;
-        const WORD_STAY_DELAY = 1000;
-
-        const DIRECTION_FORWARDS = 0;
-        const DIRECTION_BACKWARDS = 1;
-
-        var direction = DIRECTION_FORWARDS;
-        var wordIndex = 0;
-        var letterIndex = 0;
-
-        var wordTypeInterval;
-
-        startTyping();
-
-        function startTyping() {
-            wordTypeInterval = setInterval(typeLetter, LETTER_TYPE_DELAY);
-        }
-
-        function typeLetter() {
-            const word = words[wordIndex];
-
-            if (direction == DIRECTION_FORWARDS) {
-                letterIndex++;
-
-                if (letterIndex == word.length) {
-                    direction = DIRECTION_BACKWARDS;
-                    clearInterval(wordTypeInterval);
-                    setTimeout(startTyping, WORD_STAY_DELAY);
-                }
-
-            } else if (direction == DIRECTION_BACKWARDS) {
-                letterIndex--;
-
-                if (letterIndex == 0) {
-                    nextWord();
-                }
-            }
-
-            const textToType = word.substring(0, letterIndex);
-
-            element.textContent = textToType;
-        }
-
-        function nextWord() {
-
-            letterIndex = 0;
-            direction = DIRECTION_FORWARDS;
-            wordIndex++;
-
-            if (wordIndex == words.length) {
-                wordIndex = 0;
-            }
-
-        }
+<script>
+   $(".counter-timer").each(function() {
+  var number = $(this).attr("data-to");
+  $(this).countTo({
+    from: 0,
+    to: number,
+    speed: 1500,
+    refreshInterval: 10,
+    formatter: function(number, options) {
+      number = number.toFixed(options.decimals);
+      number = number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return number;
     }
+  });
+});
+
 </script>
+
 
 
 {% endblock js %}
