@@ -20,6 +20,73 @@
 </head>
 
 <style>
+    *{
+
+        font-family: Raleway;
+    }
+    nav{
+        box-shadow: 0px 2px 12px rgba(30, 37, 50, 0.14);
+    }
+    .title{
+        font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1188em;
+    text-transform: uppercase;
+
+    color: #2C3A47;
+    }
+    .iitg{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+
+
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+
+        /* Dark Blue - For text and dark bg */
+
+        color: #1E2532;
+    }
+    .dropdown{
+        padding: 0.5vh 1vw;
+    }
+    .dropdown button{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1188em;
+        text-transform: uppercase;
+
+        /* White */
+
+        color: #FFFFFF;
+
+    }
+    .nav-item{
+        padding: 0 20px;
+    }
+    .nav-link{
+        font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            /* identical to box height */
+
+
+            /* Good Blue - For nav selected text, and some card bg's */
+
+            color: #2170E8;
+
+    }
     .footer-heading {
         font-family: Raleway;
         font-style: normal;
@@ -78,15 +145,15 @@
 
 
     
-        <h3 style="text-align: center;"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
+        <h3 style="text-align: center;" class="iitg"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
         <div class="row">
-            <div class="col" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
+            <div class="col title" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
                 <h5>STUDENTS' AFFAIRS BOARD </h5>
             </div>
             <div class="col" style="background-color: #2C3A47; color: white ; padding-top: 1%; padding-bottom: 1%;">
                 <div class="btn-group dropdown">
-                    <button type="button" class="btn dropdown-toggle" style="color: white; font-size: 150%;" data-bs-toggle="dropdown" aria-expanded="false">
-                    Student Alumni Interaction Linkage
+                    <button type="button" class="btn dropdown-toggle" style="color: white; font-size: 150%;" data-toggle="dropdown" aria-expanded="false">
+                        Student Alumni Interaction Linkage
                     </button>
                     <ul class="dropdown-menu text-center" style="color: white; background-color: #2C3A47; padding-right: 40%;">
                         <li>
@@ -113,8 +180,8 @@
                 </div>
             </div>
             <div class="col"></div>
-        </div><br> 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        </div> 
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
