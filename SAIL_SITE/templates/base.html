@@ -29,15 +29,15 @@
     }
     .title{
         font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.1188em;
-    text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1188em;
+        text-transform: uppercase;
 
-    color: #2C3A47;
+        color: #2C3A47;
     }
     .iitg{
         font-family: Raleway;
@@ -87,6 +87,31 @@
             color: #2170E8;
 
     }
+    .nav-title,.dropdown-item{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.1188em;
+        text-transform: uppercase;
+
+        /* White */
+
+        color: #FFFFFF;
+
+
+    }
+    .dropdown-item{
+        padding: 2% ;
+    }
+    
+    .nav-main *{
+        background: #2C3A47 !important;
+        padding: 2% 1%;
+        
+    }
     .footer-heading {
         font-family: Raleway;
         font-style: normal;
@@ -133,79 +158,76 @@
         color: #9FABB7;
     }
     @media screen and (max-width:768px) {
-        .dropdown button{
+        .title,.nav-title,.dropdown-item{
             font-size: 12px !important;
+        }
+
+        .nav-main *{
+
+            padding: 10px 20px;
+            
+        }
+        .dropdown-menu{
+            width: 100vw !important;
         }
     }
 
 </style>
 <body>
 
-    <div style="position: -webkit-sticky; position: sticky; top: 0; background-color: white;">
+    <div style="position: -webkit-sticky; position: sticky; top: 0; background-color: white; z-index: 33;">
 
-
-    
         <h3 style="text-align: center;" class="iitg"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
-        <div class="row">
-            <div class="col title" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
+        
+       
+        
+        <div class="row justify-content-start">
+            <div class="col-md-3 col-sm-2 title" style="margin-left: 5%;  padding-top: 1%; padding-bottom: 1%; color:#2C3A47;;">
                 <h5>STUDENTS' AFFAIRS BOARD </h5>
+
             </div>
-            <div class="col" style="background-color: #2C3A47; color: white ; padding-top: 1%; padding-bottom: 1%;">
-                <div class="btn-group dropdown">
-                    <button type="button" class="btn dropdown-toggle" style="color: white; font-size: 150%;" data-bs-toggle="dropdown" aria-expanded="false">
-                        Student Alumni Interaction Linkage
-                    </button>
-                    <ul class="dropdown-menu text-center" style="color: white; background-color: #2C3A47; padding-right: 40%;">
-                        <li>
-                            <a href="">
-                                <h2 style="color: white;">HAB</h2>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <h2 style="color: white;">Sports Board</h2>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <h2 style="color: white;">Technical Board</h2>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <h2 style="color: white;">Cultural Board</h2>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="col-md-8 col-sm-4 btn-group nav-main">
+
+                <button class="nav-title" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student Alumni Interaction Linkage
+                    <img src="/media/Arrow - Down 2.png" alt="">
+                </button>
+                <div class="dropdown-menu" style="width: 49%;">
+                    <a class="dropdown-item" href="#">HAB</a>
+                    <a class="dropdown-item" href="#">Sports Board</a>
+                    <a class="dropdown-item" href="#">Technical Board</a>
+                    <!-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a> -->
                 </div>
             </div>
-            <div class="col"></div>
+            
+
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mx-5">
                         <li class="nav-item">
-                            <a class="nav-link {% block one %} {% endblock one %}" aria-current="page" href="{% url 'home:home' %}" style="padding-right: 1em; font-size: 1.3vw;">Home</a>
+                            <a class="nav-link {% block one %} {% endblock one %}" aria-current="page" href="{% url 'home:home' %}" style="padding-right: 1em; ">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% block two %} {% endblock two %}" aria-current="page" href="{% url 'services:services' %}" style="padding-right: 1em; font-size: 1.3vw;">Services</a>
+                            <a class="nav-link {% block two %} {% endblock two %}" aria-current="page" href="{% url 'services:services' %}" style="padding-right: 1em; ">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% block three %} {% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}" style="padding-right: 1em;font-size: 1.3vw;">Initiatives</a>
+                            <a class="nav-link {% block three %} {% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}" style="padding-right: 1em;">Initiatives</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% block four %} {% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}" style="padding-right: 1em;font-size: 1.3vw;">Events</a>
+                            <a class="nav-link {% block four %} {% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}" style="padding-right: 1em;">Events</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% block five %} {% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}" style="padding-right: 1em;font-size: 1.3vw;">Blog</a>
+                            <a class="nav-link {% block five %} {% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}" style="padding-right: 1em;">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {% block six %} {% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}" style="padding-right: 1em;font-size: 1.3vw;">Team</a>
+                            <a class="nav-link {% block six %} {% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}" style="padding-right: 1em;">Team</a>
                         </li>
                     </ul>
                 </div>
