@@ -47,10 +47,10 @@
 
 <!-- slider banner	 -->
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding:0 0 !important; ">
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="width: 100%;height: 100vh !important;">
 
         {% for i in pic_list %} {% if i.id == 1 %}
-        <div class="carousel-item active" data-bs-interval="5000">
+        <div class="carousel-item active" data-bs-interval="2000">
             <img src="{{i.img.url}}" class="d-block w-100" alt="...">
         </div>{% endif %} {% endfor %} {% for i in pic_list %} {% if i.id != 1 %}
         <div class="carousel-item" data-bs-interval="2000">
