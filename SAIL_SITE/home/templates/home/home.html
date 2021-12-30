@@ -114,14 +114,15 @@
 </section>
 
 
-<section class="container" style="margin-bottom: 5%;">
+<section class="container" id="counter" style="margin-bottom: 5%;">
     <div class="page-title" style="margin-bottom: 3%;">Achievements</div>
 
+    
     <div class="row">
         <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 15px;">
             <div class="ach-box stats-div row align-items-end">
 
-                <h2 class="col-4 counter-timer" data-from="0" data-to="89">81+</h2>
+                <h2 class="col-4"><span class=" counter-value" data-count="81">0</span>+</h2>
                 <h6 class="col-8">Startups</h6>
                 
             </div>
@@ -129,7 +130,7 @@
         <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 15px;">
             <div class="ach-box stats-div row align-items-end">
 
-                <h2 class="col-4 counter-timer" data-from="0" data-to="1720">1720+</h2>
+                <h2 class="col-4"><span class=" counter-value" data-count="1720">0</span>+</h2>
                 <h6 class="col-8">Opted for MS abroad</h6>
                 
             </div>
@@ -137,7 +138,7 @@
         <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 15px;">
             <div class="ach-box stats-div row align-items-end">
 
-                <h2 class="col-4 counter-timer" data-from="0" data-to="96">96+</h2>
+                <h2 class="col-4"><span class=" counter-value" data-count="96">0</span>+</h2>
                 <h6 class="col-8">IIM Alumni</h6>
                 
             </div>
@@ -145,7 +146,7 @@
         <div class=" col-lg-3 col-sm-12 col-xs-12 text-center align-items-end" style="padding: 0 15px;">
             <div class="ach-box stats-div row align-items-end">
 
-                <h2 class="col-4 counter-timer" data-from="0" data-to="5231">5231+</h2>
+                <h2 class="col-4"><span class=" counter-value" data-count="5231">0</span>+</h2>
                 <h6 class="col-8">Continuing Students</h6>
                 
             </div>
@@ -153,27 +154,12 @@
     </div>
 </section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static '/js/counter.js' %}" ></script>
 
 {% endblock content %} 
 {% block js %}
-<script>
-    $(".counter-timer").each(function() {
-  var number = $(this).attr("data-to");
-  console.log('hi');
-  $(this).countTo({
-    from: 0,
-    to: number,
-    speed: 1500,
-    refreshInterval: 10,
-    formatter: function(number, options) {
-      number = number.toFixed(options.decimals);
-      number = number.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      return number;
-    }
-  });
-});
 
-</script>
 
 
 {% endblock js %}
