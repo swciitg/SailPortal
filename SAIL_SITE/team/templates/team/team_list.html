@@ -13,7 +13,7 @@
 
 <style>
     #present_mems{
-        margin: 5%; 
+        padding: 5%; 
     }
     .team_photos_image {
         padding: 0 0;
@@ -136,7 +136,7 @@
 
     <div class="row" id="present_year_team">
         {% for team_member in team %}
-            <div class="col-lg-4 col-md-4" id="present_mems">
+            <div class="col-lg-5 col-md-5" id="present_mems">
                 <div class="row">
                     <img class="team_photos_image" src="/media/{{team_member.pic}}" alt="{{team_member.name}}">
                 </div>
@@ -167,7 +167,7 @@
 
     <div class="row" id="past_years_team" style="display: none;">
         {% for team_member in pastmemberlist %}
-            <div class="col-lg-4 col-md-4"  style="margin: 5%;">
+            <div class="col-lg-5 col-md-5"  style="padding: 5%;">
                 <div class="row">
                     <img class="team_photos_image" src="/media/{{team_member.pic}}" alt="{{team_member.name}}">
                 </div>
