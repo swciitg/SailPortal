@@ -136,7 +136,7 @@
 
     <div class="row" id="present_year_team">
         {% for team_member in team %}
-            <div class="col-lg-4" id="present_mems">
+            <div class="col-lg-4 col-md-4" id="present_mems">
                 <div class="row">
                     <img class="team_photos_image" src="/media/{{team_member.pic}}" alt="{{team_member.name}}">
                 </div>
@@ -167,7 +167,7 @@
 
     <div class="row" id="past_years_team" style="display: none;">
         {% for team_member in pastmemberlist %}
-            <div class="col-lg-4"  style="margin: 5%;">
+            <div class="col-lg-4 col-md-4"  style="margin: 5%;">
                 <div class="row">
                     <img class="team_photos_image" src="/media/{{team_member.pic}}" alt="{{team_member.name}}">
                 </div>
@@ -205,13 +205,13 @@
 
         if(year_type == 1)
         {
-            present.style.display = "block";
+            present.style.display = "flex";
             past.style.display = "none";
         }
         else
         {
             present.style.display = "none";
-            past.style.display = "block";
+            past.style.display = "flex";
         }
     })
 </script>
