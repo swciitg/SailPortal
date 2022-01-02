@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}
+	Blog | {{object.title}}
+{% endblock title %}
+
+
+{% block css %}
+	<style>
+		
+		
+		
+		.button{
+			background-color: cyan;
+			border-radius: .5rem;
+			height: 40px;
+			width: 250px;
+			transition: transform .2s;
+		}
+		.button:hover{
+			background-color: chartreuse;
+			transform: scale(1.25,1.25);
+		}
+	</style>
+{% endblock css %}
+	
+
+{% block content %}
+
+	<section class="blog-body" style="padding-top: 55px;">
+		<div class="title">
+			<h1 class="title-text">{{object.title}}</h1>
+		</div>
+			
+		<div class="date-time">
+			{{ object.date_posted|date:"F d, Y" }}
+		</div>
+		
+		<blockquote class="quote">
+			<p class="quote-text" data-selectable-paragraph="">
+				
+			</p>
+		</blockquote>
+		
+		<div class="blog-body-content">
+			{{ object.body|safe }}
+		</div>
+	</section>
+	<div class="row" style="display: flex; align-items: center; justify-content: center; padding-top:10px;padding-bottom:30px;height: 80px;width: 100%;">
+
+		<button class="button">
+			
+				<a target="_blank" href="{{ object.blog_link }}">
+					Read on Medium
+				</a>		
+			
+		</button>
+	</div>
+	
+	
+{% endblock content %}
+	
+	
+{% block share-options %}
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60faaee9722d7f95"></script>
+
+{% endblock share-options %}

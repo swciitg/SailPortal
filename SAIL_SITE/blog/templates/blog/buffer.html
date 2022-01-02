@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <title>Blog | Home</title>
+  </head>
+  
+  <style>
+      @import url(/SAIL_SITE/static/blog/main.css);
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="http://iitg.ac.in/sail/assets/images/logo.png" width="90" height="30" class="d-inline-block align-top" alt="">
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'team:all' %}">Team</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+      
+    
+    <section class="blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="blog-area">
+                        <div class="row">
+                                
+                            
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog12.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">Test Cricket In the 21st Century</h4>
+                                        <p class="blog-meta">Abhilash Reddy Kalam, Mar 3, 2019</p>
+                                        <p>A lot of the memories I have of my IIT Guwahati experience involve the countless hours I spent in the TV Room watching sports (mostly Cricket). My love for the sport grew by leaps and bounds during the 4 years I spent there. Everyone in IIT is fortunate to have experienced at least one Cricket World Cup during their time there. I particularly envy those who experienced the 2011 WC, as I am sure it must have been fantabulous...</p>
+                                        <a class="blog-link" target="_blank" href="{{ blog.blog_link}}" class="button">Read More</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog11.png">
+                                        </div>
+                                        <h4 class="blog-title">10 lessons from failing at a startup</h4>
+                                        <p class="blog-meta">Aman Dalmia, Feb 23, 2019</p>
+                                        <p>As we embark on a new journey while entering the gates of our institute the first time, its not uncommon to hear the phrase “I want to build something of my own one day”. While it’s generally wise to spend enough time building your skills and gaining experience to prepare yourself for such an opportunity, sometimes there is an idea. An idea that calls for action now, regardless of where you are. One such idea originated from the minds...</p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/10-lessons-from-failing-at-a-startup-97ef16ae5b71" class="button">Read More</a>
+                                    </div>
+                                </div>
+                            
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog10.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">Last minute tips for GATE 2020</h4>
+                                        <p class="blog-meta">Akash Chouksey, Jan 27, 2019</p>
+                                        <p>I belong to Seoni, Madhya Pradesh, and did my B.Tech in Civil Engineering from IIT Guwahati. I did my secondary schooling from my home town itself and moved to Bhopal for senior secondary and was selected in a program called ‘SUPER 50’, which was inspired by Anand Kumar’s ‘SUPER 30’.Previously I was working as AEE(CIVIL) in ONGC, which I left in September 2019. and currently, I’m working as Dy. Manager(Tech.) at NHAI...</p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/last-minute-tips-for-gate-2020-by-akash-chouksey-3ae4fb00ed45" class="button">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog -->
+                                <!-- Single Blog -->
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog9.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">Last minute tips for GATE 2020</h4>
+                                        <p class="blog-meta">Ariktha Srivathsan, Jan 25, 2019</p>
+                                        <p>I did my undergrad in Biotechnology at IIT Guwahati. During my time there, I worked in the Viral Immunology Lab. Branching off from Immunology, I found myself genuinely interested in population health. Currently, I am pursuing a Masters in Public Health in Epidemiology of Microbial Diseases at the Yale School of Public Health.I decided to take the GATE in September 2018. My primary goal was to thoroughly revise...</p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/last-minute-tips-for-gate-2020-by-ariktha-srivathsan-ac8683626167" class="button">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog -->
+                            	<!-- Single Blog -->
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog9.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">Excerpts from the Panel Discussion — 25/08/19</h4>
+                                        <p class="blog-meta">The SAIL team, Oct 5, 2019</p>
+                                        <p>SAIL, IITG, conducted a Panel Discussion on 25/08/19 with the alumni of its own institute. The panelists were Mr. Ravish Kumar(Acumen fellow, an agriprenuer, and IIMA alumnus), Mr. Kapinjal Kishore Sharma(Officer at Ministry of Indian Railways, Govt of India) and Dr. Nelson Muthu(Assistant Professor at IIT Guwahati). This blog is a compilation of the excerpts taken from the Panel Discussion to give the readers an insight into the event...</p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/excerpts-from-the-panel-discussion-25-08-19-8e83502cb887" class="button">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog -->
+                                <!-- Single Blog -->
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog7.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">The SAIL team Speaks</h4>
+                                        <p class="blog-meta">The SAIL team, Apr 18, 2019</p>
+                                        <p>Student Alumni Interaction Linkage aka SAIL, a small team of visionaries and passionate go-getters which works tirelessly to bring the Alumni of IIT Guwahati a bit closer to the campus.But then, we all know what SAIL does, right ? Also, the best way to get an insight into the SAIL work is by asking the Ex-SAILors to narrate the tales of their experiences. So, let us begin. Let us hear what the previous team has got to say- ...</p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/the-sail-team-speaks-a827898fe87a" class="button">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog -->
+                                <!-- Single Blog -->
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog6.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">Journey of Aashish Goel</h4>
+                                        <p class="blog-meta">Aashish Goel, Mar 15, 2019</p>
+                                        <p>Just like any student, I too was concerned about my future post graduation. And just like any student, I too was banking on the options available with me. Even though I had eventually managed to grab the ‘Institute Silver Medal’ for having aggregated the highest CPI in my department, I was never really inclined towards doing an MS or a PhD. I was quite clear then, and am glad that I am clear about it now as well... </p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/journey-of-aashish-goel-2c699e040d22" class="button">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog -->
+                            	<!-- Single Blog -->
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog5.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">Journey of Antriksh Singh</h4>
+                                        <p class="blog-meta">Antriksh Singh, Mar 15, 2019</p>
+                                        <p>Prior to starting the PhD, I was working with Proctor and Gamble for two years trying to improve and optimize numerically FMCG packaging processes with focus on finite element (FEM) modeling of their Injection Stretch Blow Moulding (ISBM) process. It was during this time I obtained my Masters degree (MPhil), which was sponsored by P&G in 2010, and I spent most of my time in Belfast, UK...</p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/journey-of-antriksh-singh-6d3b8656eb4a" class="button">Read More</a>
+                                    </div>
+                                </div>
+                                <!-- Single Blog -->
+                            	<!-- Single Blog -->
+                                <div class="col-sm-6">
+                                    <div class="single-blog">
+                                        <div>
+                                        <img class="blog-thumb" src="http://www.iitg.ac.in/sail/assets/images/blog/blog4.jpeg">
+                                        </div>
+                                        <h4 class="blog-title">Journey of Bhupinder Kumar</h4>
+                                        <p class="blog-meta">Bhupinder Kumar, Mar 15, 2019</p>
+                                        <p>IITs are great institutions and IITG adheres to that legacy. The exposure at IITs is exceptional. All throughout the semester, one is bogged down by the numerous assignments, excruciating labs, quizzes, mid-semesters, end-semesters, etc. In addition to that, we have Alcheringa, Inter IIT, Techniche and Manthan. Over and above we have our own space for movies and friends (boys and girls both).What I have learnt out of all this is to optimize...</p>
+                                        <a class="blog-link" target="_blank" href="https://medium.com/@sail.iitguwahati/journey-of-bhupinder-kumar-26e64369d9fd" class="button">Read More</a>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+      
+      
+
+      <!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+  
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
+          <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+            consectetur
+            adipisicing elit.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Link 1</a>
+            </li>
+            <li>
+              <a href="#!">Link 2</a>
+            </li>
+            <li>
+              <a href="#!">Link 3</a>
+            </li>
+            <li>
+              <a href="#!">Link 4</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <hr>
+  
+    <!-- Social buttons -->
+    <ul class="list-unstyled list-inline text-center">
+      <li class="list-inline-item">
+        <a class="btn-floating btn-fb mx-1">
+          <i class="fab fa-facebook-f"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-tw mx-1">
+          <i class="fab fa-twitter"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-li mx-1">
+          <i class="fab fa-linkedin-in"> </i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="btn-floating btn-dribbble mx-1">
+          <i class="fab fa-dribbble"> </i>
+        </a>
+      </li>
+    </ul>
+    <!-- Social buttons -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href="https://mdbootstrap.com/"> SAIL IIT Guwahati</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+      
+      
+        
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>  
+</body>
+</html>

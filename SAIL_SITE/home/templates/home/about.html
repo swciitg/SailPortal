@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}SAIL | About{% endblock title %}
+
+{% block css %}
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.about-bg{
+    height: 90%;
+    min-height: 400px;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
+}
+.section-title h2 {
+    margin-top: 5rem;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 32px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    line-height: 1;
+    font-weight: bold;
+    color: #17252a;
+}
+.section-title h2:before {
+    left: auto;
+    right: 50%;
+    background-color: #3aafa9;
+}
+
+.section-title h2:before, .section-title h2:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    bottom: 0;
+    width: 50px;
+    height: 5px;
+    background-color: #17252a;
+}
+
+span{
+    color: #3aafa9;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+.my-nav{
+    z-index: 0;
+    background-color: #17252a;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+</style>
+{% endblock css %}
+{% block content %}
+<section id="about" class="section-padding about-area bg-light" style="padding-bottom: 150px;">
+    <div class="container">
+        <!-- Section Title -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6 ">
+                <div class="section-title text-center">
+                    <h2>About Sail</h2>
+                </div>
+            </div>
+        </div>
+        <!-- //Section Title -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-bg" style="background-image:url(https://www.iitg.ac.in/aer/content/alumni/images/sail2.jpg)">
+                    
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content text-muted">
+                    <h2><span>Student Alumni Interaction Linkage</span></h2>
+
+                    <p>Student Alumni Interaction Linkage (SAIL) is a voluntary cell of IIT Guwahati under the office of Alumni Affairs and External Relations. It will be operated by the students of IIT Guwahati under the Guidance of Dean, Alumni Affairs and External Relations. SAIL acts as an engaging and a mutually beneficial link between IIT Guwahati and its Alumni community.</p>
+                    <br>
+                    <p>The organization functions with a vision to develop a dynamic student alumni community with IITGAA committed for establishing connections and strengthening ties between students and alumni, facilitating IIT Guwahati's mission of providing top quality education and opportunities and investing in its future.</p>
+                    <br>
+                    <p>For achieving our well specified and sophisticated vision, a plethora of activities have been undertaken to establish connections and strengthening ties between current students to alumni; and alumni to alumni.</p>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

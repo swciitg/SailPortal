@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card text-center">
+    <div class="card-header">
+      {{object.company}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{object.desc}}</h5>
+      <p class="card-text">Please Contact {{object.name}} @ {{object.email}} - {{object.phone}}</p>
+    </div>
+    <div class="card-footer text-muted">
+      {{object.published}}
+    </div>
+  </div>
+
+            
+{% endblock content %}   
