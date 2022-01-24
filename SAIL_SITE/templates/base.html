@@ -192,7 +192,28 @@
     .ext-padd{
         padding-left: 0 !important;
     }
+
+    nav{
+        animation: flow-up 5s ease-in-out;
+    }
+
+    .nav-link.active{
+        color: #2170E8 !important;
+        font-weight: 800 !important;
+    }
     
+    /* @keyframes flow-up {
+        0% {
+            position: absolute;
+            position: fixed;
+            bottom: 0 ;
+        }
+        100% {
+            position: sticky;
+            position: -webkit-sticky;
+            top : 0;
+        }
+    } */
     
 </style>
 <body>
@@ -218,44 +239,43 @@
                     <a class="dropdown-item" href="#">HAB</a>
                     <a class="dropdown-item" href="#">Sports Board</a>
                     <a class="dropdown-item" href="#">Technical Board</a>
-                    <!-- <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Separated link</a> -->
+                    
                 </div>
             </div>
             
-
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
             <div class="container-fluid">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto mx-5">
-                        <li class="nav-item">
-                            <a class="nav-link {% block one %} {% endblock one %}" aria-current="page" href="{% url 'home:home' %}" style="padding-right: 1em; ">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% block two %} {% endblock two %}" aria-current="page" href="{% url 'services:services' %}" style="padding-right: 1em; ">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% block three %} {% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}" style="padding-right: 1em;">Initiatives</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% block four %} {% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}" style="padding-right: 1em;">Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% block five %} {% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}" style="padding-right: 1em;">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% block six %} {% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}" style="padding-right: 1em;">Team</a>
-                        </li>
-                    </ul>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mx-5">
+                            <li class="nav-item">
+                                <a class="nav-link {% block one %} {% endblock one %}" aria-current="page" href="{% url 'home:home' %}" style="padding-right: 1em; ">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block two %} {% endblock two %}" aria-current="page" href="{% url 'services:services' %}" style="padding-right: 1em; ">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block three %} {% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}" style="padding-right: 1em;">Initiatives</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block four %} {% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}" style="padding-right: 1em;">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block five %} {% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}" style="padding-right: 1em;">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% block six %} {% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}" style="padding-right: 1em;">Team</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
     </div>
+    
     {% block carousel %} {% endblock carousel %}
     <!-- <ul class="nav sticky-top">
         <li class=" nav-item ">
@@ -281,10 +301,7 @@
 
 
 
-    
-
-
-    <div class="content " style="padding: 0 10vw; ">
+    <div class="content " style="padding: 7% 10vw; ">
 
 
         {% block content %} {% endblock content %}
@@ -348,7 +365,7 @@
                 <br>
                 <br>
 
-                <div class="row  mobile-center" style="padding-top: 5px;">
+                <div class="row  mobile-center align-items-center" style="padding-top: 5px;">
                     <div class="col-lg-6 col-sm-6 col-xs-6 iitg-hab" >
                         <img src="/media/SAIL_logo.png">
                         &nbsp; 
