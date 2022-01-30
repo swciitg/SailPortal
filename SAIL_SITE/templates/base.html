@@ -30,18 +30,42 @@
         box-shadow: 0px 2px 12px rgba(30, 37, 50, 0.14);
     }
     .title{
+
+        font-family: Raleway;
         font-style: normal;
         font-weight: bold;
         font-size: 18px;
         line-height: 21px;
-        display: flex;
+
         align-items: center;
         letter-spacing: 0.1188em;
         text-transform: uppercase;
 
         color: #2C3A47;
+
+        padding: 30px 35px;
+
+    }
+    .dropdown-title{
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+
+        align-items: center !important;
+        text-align: center !important;
+        letter-spacing: 0.1188em;
+        text-transform: uppercase;
+
+        /* White */
+
+        color: #FFFFFF;
+        padding: 30px 35px;
+
     }
     .iitg{
+
         font-family: Raleway;
         font-style: normal;
         font-weight: normal;
@@ -57,7 +81,7 @@
         color: #1E2532;
     }
     .dropdown{
-        padding: 0.5vh 1vw;
+        /* padding: 0.5vh 1vw; */
     }
     .dropdown button{
         font-style: normal;
@@ -87,6 +111,20 @@
         /* Good Blue - For nav selected text, and some card bg's */
 
         color: #2170E8;
+
+    }
+    .dropdown,.dropdown-menu{
+        background: #2C3A47;
+        /* OLD EFFECTS/Right Shadow */
+
+        box-shadow: 2px 0px 24px rgba(0, 0, 0, 0.09);
+
+    }
+    
+   
+    .dropdown button{
+       background: transparent;
+       border: none;
 
     }
     .nav-title,.dropdown-item{
@@ -165,8 +203,9 @@
         background: #22384b !important;
     }
     @media screen and (max-width:768px) {
-        .title,.nav-title,.dropdown-item{
+        .title,.dropdown-title,.dropdown-item{
             font-size: 12px !important;
+            padding: 20px 20px !important;
         }
 
         .nav-main *{
@@ -193,18 +232,21 @@
         padding-left: 0 !important;
     }
 
-    nav{
-        animation: flow-up 5s ease-in-out;
-    }
-
+    
     .nav-link.active{
         color: #2170E8 !important;
         font-weight: 800 !important;
     }
     
+    nav{
+        /* animation: flow-up 5s ease-in-out; */
+        position: -webkit-sticky !important;
+        position: sticky !important;
+        top: 138px !important;
+    }
     /* @keyframes flow-up {
         0% {
-            position: absolute;
+
             position: fixed;
             bottom: 0 ;
         }
@@ -220,21 +262,53 @@
 
     <div style="position: -webkit-sticky; position: sticky; top: 0; background-color: white; z-index: 33;">
 
-        <h3 style="text-align: center;margin-top: 20px;margin-bottom: 20px;" class="iitg"><img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> Indian Institute of Technology Guwahati</h3>
-        
-       
+        <h3 style="text-align: center;margin-top: 20px;margin-bottom: 20px;" class="iitg">
+            <img width="40" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/220px-IIT_Guwahati_Logo.svg.png" alt=""> 
+            Indian Institute of Technology Guwahati
+        </h3>
         
         <div class="row justify-content-start">
             <div class="col-md-3 col-sm-2 title" style="padding-left: 5%;color:#2C3A47;;">
-                <h5>STUDENTS' AFFAIRS </h5>
+                STUDENTS' AFFAIRS
 
             </div>
-            <div class="col-md-8 col-sm-4 btn-group nav-main">
-
-                <button class="nav-title" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="col-md-5 col-sm-4 align-self-center btn-group dropdown" style="padding: 0 !important;">
+                
+                <button class="dropdown-title" type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" >
                     Student Alumni Interaction Linkage
-                    <img src="/media/Arrow - Down 2.png" alt="">
+                    <span>
+                        <img src="/media/Arrow - Down 2.png" alt="">
+                    </span>
                 </button>
+                <div class="dropdown-menu" style="width: 100%;">
+                    <a class="dropdown-item" href="#">HAB</a>
+                    <a class="dropdown-item" href="#">Sports Board</a>
+                    <a class="dropdown-item" href="#">Technical Board</a>
+                    
+                </div>
+                
+            </div>
+            <div class="col"></div>
+        </div>
+        <!-- <div class="row">
+            <div class="title">
+                STUDENTS' AFFAIRS
+            </div>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            <div class="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
                 <div class="dropdown-menu" style="width: 49%;">
                     <a class="dropdown-item" href="#">HAB</a>
                     <a class="dropdown-item" href="#">Sports Board</a>
@@ -242,39 +316,12 @@
                     
                 </div>
             </div>
-            
-        </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
-            <div class="container-fluid">
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto mx-5">
-                            <li class="nav-item">
-                                <a class="nav-link {% block one %} {% endblock one %}" aria-current="page" href="{% url 'home:home' %}" style="padding-right: 1em; ">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% block two %} {% endblock two %}" aria-current="page" href="{% url 'services:services' %}" style="padding-right: 1em; ">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% block three %} {% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}" style="padding-right: 1em;">Initiatives</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% block four %} {% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}" style="padding-right: 1em;">Events</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% block five %} {% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}" style="padding-right: 1em;">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% block six %} {% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}" style="padding-right: 1em;">Team</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+
+        </div> -->
     </div>
+
+    
     
     {% block carousel %} {% endblock carousel %}
     <!-- <ul class="nav sticky-top">
@@ -299,7 +346,36 @@
     </ul> -->
 
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " >
+        <div class="container-fluid">
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mx-5">
+                        <li class="nav-item">
+                            <a class="nav-link {% block one %} {% endblock one %}" aria-current="page" href="{% url 'home:home' %}" style="padding-right: 1em; ">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block two %} {% endblock two %}" aria-current="page" href="{% url 'services:services' %}" style="padding-right: 1em; ">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block three %} {% endblock three %}" aria-current="page" href="{% url 'initiatives:initiatives' %}" style="padding-right: 1em;">Initiatives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block four %} {% endblock four %}" aria-current="page" href="{% url 'events:events-home'%}" style="padding-right: 1em;">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block five %} {% endblock five %}" aria-current="page" href="{% url 'blog:blog-home' %}" style="padding-right: 1em;">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% block six %} {% endblock six %}" aria-current="page" href="{% url 'team:SailTeam'%}" style="padding-right: 1em;">Team</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
 
     <div class="content " style="padding: 7% 10vw; ">
 
@@ -384,6 +460,26 @@
             </footer>
         </div>
     </div>
+
+
+    <!-- <script>
+        window.addEventListener("scroll", function(e){
+            var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+            //If we have scrolled far enough on the page to be past the image
+            //Change the nav to have fixed positioning
+            var imageHeight = document.getElementById("image-header").clientHeight
+            var nav = document.getElementById("nav");
+            if(scrollTop > imageHeight){
+                nav.classList.add("fixed-nav");
+            }
+            else{
+                nav.classList.remove("fixed-nav");
+            }
+
+    });
+    </script> -->
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
