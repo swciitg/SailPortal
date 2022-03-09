@@ -19,14 +19,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
-    path('opportunity/', include('opportunity.urls')),
-    path('', include('home.urls')),
-    path('blog/', include('blog.urls')),
-    path('events/', include('events.urls')),
-    path('initiatives/', include('initiatives.urls')),
-    path('services', include('services.urls')),
-    path('team/', include('team.urls')),
+    path('sail/admin/', admin.site.urls),
+    path('sail/accounts/', include('allauth.urls')),
+    path('sail/opportunity/', include('opportunity.urls')),
+    path('sail/', include('home.urls')),
+    path('sail/blog/', include('blog.urls')),
+    path('sail/events/', include('events.urls')),
+    path('sail/initiatives/', include('initiatives.urls')),
+    path('sail/services', include('services.urls')),
+    path('sail/team/', include('team.urls')),
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
