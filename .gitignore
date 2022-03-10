@@ -5,7 +5,8 @@
 .DS_Store
 SAIL_SITE/lib/*
 SAIL_SITE/bin/*
-SAIL_SITE/dq.sqlite3
+SAIL_SITE/db/db.sqlite3
+SAIL_SITE/db.sqlite3
 SAIL_SITE/pyvenv 2.cfg
 *.pth
 *.pyc
