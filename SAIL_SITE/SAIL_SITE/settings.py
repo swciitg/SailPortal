@@ -148,12 +148,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/sail/media/'
 
 STATIC_URL = '/sail/static/'
 
 STATICFILES_DIRS = [STATIC_DIR,]
-MEDIA_ROOT = BASE_DIR/'media'
+MEDIA_ROOT = BASE_DIR/'sail'/'media'
 CKEDITOR_UPLOAD_PATH = "blog/"
 
 # Default primary key field type
