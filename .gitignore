@@ -10,6 +10,7 @@ SAIL_SITE/db.sqlite3
 SAIL_SITE/pyvenv 2.cfg
 *.pth
 *.pyc
+SAIL_SITE/assets/*
 SAIL_SITE/*/__pycache__/*
 SAIL_SITE/*/migrations/__pycache__/*
 *.pyc
