@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'SAIL_SITE.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db'/'db.sqlite3',
     }
 }
 
@@ -148,9 +148,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-MEDIA_URL = '/sail/media/'
+MEDIA_URL = 'sail/media/'
 
-STATIC_URL = '/sail/static/'
+STATIC_URL = 'sail/static/'
 
 STATICFILES_DIRS = [STATIC_DIR,]
 MEDIA_ROOT = BASE_DIR/'sail'/'media'

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+        context: .
+        dockerfile: Dockerfile.prod
+    ports:
+      - 8004:8000
+    command: sh -c "/code/entrypoint.prod"
+    restart: always
+    volumes:
+        - "./sail/static:/code/web/sail/static"
+        - "./sail/media:/code/sail/media"
+        - "./db:/code/db"
+    env_file:
+        - ./.env.prod
+
