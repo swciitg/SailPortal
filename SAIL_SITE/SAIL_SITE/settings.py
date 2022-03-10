@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-h0n(%bebze^q*h3w(kw2$lfvzz#l-!@!zu4+0^@@bcl#mxsafs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['swc.iitg.ac.in']
 
 
 # Application definition
@@ -151,7 +151,7 @@ USE_TZ = True
 MEDIA_URL = 'sail/media/'
 
 STATIC_URL = 'sail/static/'
-
+STATIC_ROOT = BASE_DIR/"assets"
 STATICFILES_DIRS = [STATIC_DIR,]
 MEDIA_ROOT = BASE_DIR/'sail'/'media'
 CKEDITOR_UPLOAD_PATH = "blog/"
