@@ -53,7 +53,7 @@ VS Code
 <img width="1680" alt="Screenshot 2022-03-10 at 5 53 52 PM" src="https://user-images.githubusercontent.com/76626599/157661795-6b982164-f360-49c6-a3df-1b60a109df81.png">
 
 Terminal
-<img width="682" alt="Screenshot 2022-03-10 at 6 19 39 PM" src="https://user-images.githubusercontent.com/76626599/157665244-f91309a2-5245-4d29-941d-e44875bb4312.png">
+
 
 Open any browser and enter the URL as given : 
 
