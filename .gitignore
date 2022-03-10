@@ -3,6 +3,7 @@
 *.virtualenv
 *.cfg
 .DS_Store
+SAIL_SITE/blog/__pycache__/*
 SAIL_SITE/blog/__pycache__/__init__.cpython-39.pyc
 SAIL_SITE/blog/__pycache__/admin.cpython-39.pyc
 SAIL_SITE/blog/__pycache__/apps.cpython-39.pyc
