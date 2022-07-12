@@ -1,5 +1,3 @@
-# Live Website : https://swc.iitg.ac.in/spardha/
-
 
 # SWC-SAIL-Portal
 
